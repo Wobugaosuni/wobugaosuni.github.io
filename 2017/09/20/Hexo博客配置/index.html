@@ -6,20 +6,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>前端用的小技巧(JS) | 我的小空间</title>
+  <title>Hexo博客配置 | 我的小空间</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="计算字符串的物理长度(px) 使用场景当不确定字符长度，又需要给它一个相对的宽度时，应该怎么做呢？ 第一时间考虑的可能是给一个百分比。字符超过这个长度时，可以让超出的字符用’…’显示。但字符都很短时，宽度就撑不开了 第二种方法是，使用 string.length 计算字符的长度。但一个问题是，汉子和英语的字体宽是不一样的，甚至每个字母的宽都可能不一样 第三种方法，是我目前觉得是第一选择的方法。计算">
-<meta name="keywords" content="JS">
+  <meta name="description" content="关于图片引用参考文档：https://hexo.io/zh-cn/docs/asset-folders.html  方式一   在_config.yml中，把post_asset_folder: false设为false。（默认是false，如果改了，要改回来。其中的一个坑，如果设为true，以下两步不生效，图片看不到） 把图片放在source/images文件夹中 通过类似于![](/imag">
 <meta property="og:type" content="article">
-<meta property="og:title" content="前端用的小技巧(JS)">
-<meta property="og:url" content="http://yoursite.com/2017/09/18/前端用的小技巧-JS/index.html">
+<meta property="og:title" content="Hexo博客配置">
+<meta property="og:url" content="http://yoursite.com/2017/09/20/Hexo博客配置/index.html">
 <meta property="og:site_name" content="我的小空间">
-<meta property="og:description" content="计算字符串的物理长度(px) 使用场景当不确定字符长度，又需要给它一个相对的宽度时，应该怎么做呢？ 第一时间考虑的可能是给一个百分比。字符超过这个长度时，可以让超出的字符用’…’显示。但字符都很短时，宽度就撑不开了 第二种方法是，使用 string.length 计算字符的长度。但一个问题是，汉子和英语的字体宽是不一样的，甚至每个字母的宽都可能不一样 第三种方法，是我目前觉得是第一选择的方法。计算">
+<meta property="og:description" content="关于图片引用参考文档：https://hexo.io/zh-cn/docs/asset-folders.html  方式一   在_config.yml中，把post_asset_folder: false设为false。（默认是false，如果改了，要改回来。其中的一个坑，如果设为true，以下两步不生效，图片看不到） 把图片放在source/images文件夹中 通过类似于![](/imag">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2017-09-20T12:31:18.000Z">
+<meta property="og:updated_time" content="2017-09-20T12:30:50.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="前端用的小技巧(JS)">
-<meta name="twitter:description" content="计算字符串的物理长度(px) 使用场景当不确定字符长度，又需要给它一个相对的宽度时，应该怎么做呢？ 第一时间考虑的可能是给一个百分比。字符超过这个长度时，可以让超出的字符用’…’显示。但字符都很短时，宽度就撑不开了 第二种方法是，使用 string.length 计算字符的长度。但一个问题是，汉子和英语的字体宽是不一样的，甚至每个字母的宽都可能不一样 第三种方法，是我目前觉得是第一选择的方法。计算">
+<meta name="twitter:title" content="Hexo博客配置">
+<meta name="twitter:description" content="关于图片引用参考文档：https://hexo.io/zh-cn/docs/asset-folders.html  方式一   在_config.yml中，把post_asset_folder: false设为false。（默认是false，如果改了，要改回来。其中的一个坑，如果设为true，以下两步不生效，图片看不到） 把图片放在source/images文件夹中 通过类似于![](/imag">
   
     <link rel="alternative" href="/atom.xml" title="我的小空间" type="application/atom+xml">
   
@@ -155,40 +154,64 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-前端用的小技巧-JS" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-Hexo博客配置" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      前端用的小技巧(JS)
+      Hexo博客配置
     </h1>
   
 
         
-        <a href="/2017/09/18/前端用的小技巧-JS/" class="archive-article-date">
-  	<time datetime="2017-09-18T12:06:38.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-09-18</time>
+        <a href="/2017/09/20/Hexo博客配置/" class="archive-article-date">
+  	<time datetime="2017-09-20T12:23:43.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-09-20</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="计算字符串的物理长度-px"><a href="#计算字符串的物理长度-px" class="headerlink" title="计算字符串的物理长度(px)"></a>计算字符串的物理长度(px)</h2><ul>
-<li>使用场景<br>当不确定字符长度，又需要给它一个相对的宽度时，应该怎么做呢？<ul>
-<li>第一时间考虑的可能是给一个<code>百分比</code>。字符超过这个长度时，可以让超出的字符用’…’显示。但字符都很短时，宽度就撑不开了</li>
-<li>第二种方法是，使用 <code>string.length</code> 计算字符的长度。但一个问题是，汉子和英语的字体宽是不一样的，甚至每个字母的宽都可能不一样</li>
-<li>第三种方法，是我目前觉得是第一选择的方法。计算已经渲染后的字符串的物理长度</li>
+        <p><br></p>
+<h2 id="关于图片引用"><a href="#关于图片引用" class="headerlink" title="关于图片引用"></a>关于图片引用</h2><p>参考文档：<a href="https://hexo.io/zh-cn/docs/asset-folders.html" target="_blank" rel="external">https://hexo.io/zh-cn/docs/asset-folders.html</a></p>
+<ul>
+<li>方式一</li>
 </ul>
-</li>
-</ul>
+<ol>
+<li>在_config.yml中，把<code>post_asset_folder: false</code>设为false。（默认是false，如果改了，要改回来。其中的一个坑，如果设为true，以下两步不生效，图片看不到）</li>
+<li>把图片放在<code>source/images</code>文件夹中</li>
+<li>通过类似于<code>![](/images/image.jpg)</code>访问图片</li>
+</ol>
 <a id="more"></a>
 <p><br></p>
 <ul>
-<li>实现的函数<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="comment">/**</span></div><div class="line"><span class="comment">* 计算字符的长度</span></div><div class="line"><span class="comment">* @param &#123;*&#125; text</span></div><div class="line"><span class="comment">*/</span></div><div class="line"><span class="keyword">export</span> <span class="function"><span class="keyword">function</span> <span class="title">getTextWidth</span>(<span class="params">text</span>) </span>&#123;  <span class="comment">// 参数为单个字符串</span></div><div class="line">  <span class="keyword">const</span> canvas = <span class="built_in">document</span>.createElement(<span class="string">'canvas'</span>) <span class="comment">// 新增 canvas 元素</span></div><div class="line">  <span class="keyword">const</span> context = canvas.getContext(<span class="string">'2d'</span>) <span class="comment">// 返回 canvas 的上下文绘图环境</span></div><div class="line">  <span class="keyword">const</span> metrics = context.measureText(text)  <span class="comment">// 测量字符串的宽</span></div><div class="line">  <span class="keyword">return</span> <span class="built_in">Math</span>.ceil(metrics.width)  <span class="comment">// 向上取整</span></div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<li>方式二</li>
+</ul>
+<ol>
+<li>在_config.yml中，把<code>post_asset_folder: false</code>设为true，打开资源文件管理功能</li>
+<li>每次通过<code>hexo new [layout] &lt;title&gt;</code>命令创建新文章时，自动创建一个文件夹。将所有与你的文章有关的资源放在这个关联文件夹中之后，你可以通过相对路径来引用它们</li>
+<li>引用方式：<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"># 比如，把`example.jpg`图片放在了资源文件夹中</div><div class="line">&#123;% asset_img example.jpg This is an example image %&#125;</div></pre></td></tr></table></figure>
+</li>
+</ol>
+<p><br></p>
+<ul>
+<li>方式三<br>可以考虑放到cdn上，直接引用图片的线上地址，不过比较麻烦<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">![test](https://res.cloudinary.com/dhoua2kgz/image/upload/v1505728541/weilaishipAvator_cffdvb.jpg)</div></pre></td></tr></table></figure>
 </li>
 </ul>
+<p><br></p>
+<h2 id="关于图片大小"><a href="#关于图片大小" class="headerlink" title="关于图片大小"></a>关于图片大小</h2><p>控制图片大小的话，可以使用img标签<br>方式二：<br>hexo没有提供修改宽高的接口，可以在模板外套一层div<br><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">style</span>=<span class="string">"width: 650px"</span>&gt;</span></div><div class="line">  &#123;% asset_img table.jpeg %&#125;</div><div class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div></pre></td></tr></table></figure></p>
+<p>方式一和方式三：<br><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">"https://xxx.jpg"</span> <span class="attr">width</span> = <span class="string">"150"</span> <span class="attr">align</span>=<span class="string">center</span> /&gt;</span></div></pre></td></tr></table></figure></p>
+<p><br></p>
+<h2 id="关于主页文章截断"><a href="#关于主页文章截断" class="headerlink" title="关于主页文章截断"></a>关于主页文章截断</h2><p>本博客使用的是<a href="https://github.com/litten/hexo-theme-yilia" target="_blank" rel="external">yilia主题</a><br>在主页，默认是不截断文章的（文章多长就显示多长）<br>但作者没有提供每一块高度设置的接口，需要手工去截断。<a href="https://github.com/litten/hexo-theme-yilia/issues/381" target="_blank" rel="external">作者原话</a><br>步骤：</p>
+<ol>
+<li><p>在/themes/yilia/_config.yml配置：</p>
+<figure class="highlight yml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># 文章太长，截断按钮文字</span></div><div class="line"><span class="attr">excerpt_link:</span> <span class="string">more</span></div><div class="line"><span class="comment"># 文章卡片右下角常驻链接，不需要请设置为false</span></div><div class="line"><span class="attr">show_all_link:</span> <span class="string">'展开全文'</span></div><div class="line"><span class="comment"># 数学公式</span></div><div class="line"><span class="attr">mathjax:</span> <span class="literal">false</span></div><div class="line"><span class="comment"># 是否在新窗口打开链接</span></div><div class="line"><span class="attr">open_in_new:</span> <span class="literal">true</span></div></pre></td></tr></table></figure>
+</li>
+<li><p>在文章里想要截断的位置处，增加一句：<br><code>&lt;!-- more --&gt;</code></p>
+</li>
+</ol>
 
       
 
@@ -197,17 +220,6 @@
     <div class="article-info article-info-index">
       
       
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">JS</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
       
 
       
@@ -258,7 +270,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="http://s.jiathis.com/qrcode.php?url=http://yoursite.com/2017/09/18/前端用的小技巧-JS/" alt="微信分享二维码">
+      <img src="http://s.jiathis.com/qrcode.php?url=http://yoursite.com/2017/09/20/Hexo博客配置/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -272,15 +284,11 @@
   
 <nav id="article-nav">
   
-    <a href="/2017/09/19/关于webpack/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          关于webpack
-        
-      </div>
-    </a>
   
+    <a href="/2017/09/20/Hexo搭建博客/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Hexo搭建博客 + Github pages</div>
+      <i class="icon-circle-right"></i>
+    </a>
   
 </nav>
 
