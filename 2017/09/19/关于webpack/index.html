@@ -8,17 +8,17 @@
   <link rel="dns-prefetch" href="http://yoursite.com">
   <title>关于webpack | 我的小空间</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="前端工程师">
+  <meta name="description" content="使用场景打包出来的文件，不加chunkhash或者hash。会有缓存的问题，需要手动的去清缓存，比较麻烦 一般这样写：chunkFilename: &amp;#39;[name].js&amp;#39;, chunkhash会比较某个文件的改动历史，如果没改动，chunkhash不变。如果改动了，chunkhush会变化。这既保证了有用的缓存，对于改动的文件也立马反应到页面上 使用：chunkFilename:">
 <meta property="og:type" content="article">
 <meta property="og:title" content="关于webpack">
 <meta property="og:url" content="http://yoursite.com/2017/09/19/关于webpack/index.html">
 <meta property="og:site_name" content="我的小空间">
-<meta property="og:description" content="前端工程师">
+<meta property="og:description" content="使用场景打包出来的文件，不加chunkhash或者hash。会有缓存的问题，需要手动的去清缓存，比较麻烦 一般这样写：chunkFilename: &amp;#39;[name].js&amp;#39;, chunkhash会比较某个文件的改动历史，如果没改动，chunkhash不变。如果改动了，chunkhush会变化。这既保证了有用的缓存，对于改动的文件也立马反应到页面上 使用：chunkFilename:">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2017-09-19T08:23:04.000Z">
+<meta property="og:updated_time" content="2017-09-20T07:59:53.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="关于webpack">
-<meta name="twitter:description" content="前端工程师">
+<meta name="twitter:description" content="使用场景打包出来的文件，不加chunkhash或者hash。会有缓存的问题，需要手动的去清缓存，比较麻烦 一般这样写：chunkFilename: &amp;#39;[name].js&amp;#39;, chunkhash会比较某个文件的改动历史，如果没改动，chunkhash不变。如果改动了，chunkhush会变化。这既保证了有用的缓存，对于改动的文件也立马反应到页面上 使用：chunkFilename:">
   
     <link rel="alternative" href="/atom.xml" title="我的小空间" type="application/atom+xml">
   
@@ -174,7 +174,17 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        
+        <h2 id="使用场景"><a href="#使用场景" class="headerlink" title="使用场景"></a>使用场景</h2><p>打包出来的文件，不加chunkhash或者hash。会有缓存的问题，需要手动的去清缓存，比较麻烦</p>
+<p>一般这样写：<br><code>chunkFilename: &#39;[name].js&#39;,</code></p>
+<h2 id="chunkhash"><a href="#chunkhash" class="headerlink" title="chunkhash"></a>chunkhash</h2><p>会比较某个文件的改动历史，如果没改动，chunkhash不变。如果改动了，chunkhush会变化。这既保证了有用的缓存，对于改动的文件也立马反应到页面上</p>
+<p>使用：<br><code>chunkFilename: &#39;[name].[chunkhash:8].js&#39;,</code></p>
+<h2 id="hash"><a href="#hash" class="headerlink" title="hash"></a>hash</h2><p>类似于时间戳，无论文件是否有改动，hash都会变化</p>
+<p>使用：<br><code>chunkFilename: &#39;[name].[hash].js&#39;,</code></p>
+<h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><ul>
+<li>官网：<a href="https://webpack.js.org/configuration/" target="_blank" rel="external">https://webpack.js.org/configuration/</a></li>
+<li>博客：<a href="https://zhuanlan.zhihu.com/p/23595975" target="_blank" rel="external">https://zhuanlan.zhihu.com/p/23595975</a></li>
+</ul>
+
       
 
       
@@ -245,6 +255,15 @@
 
   
 <nav id="article-nav">
+  
+    <a href="/2017/09/20/关于table/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          关于table
+        
+      </div>
+    </a>
   
   
     <a href="/2017/09/18/hello-world/" id="article-nav-older" class="article-nav-link-wrap">
@@ -372,6 +391,10 @@ getOwnMetadataKeys:function(t){return o(i(t),arguments.length<2?void 0:u(argumen
             <input type="checkbox" q-on="click:toggleTag(e)" q-attr="checked:showTags">
           </label>
           <ul class="article-tag-list" q-show="showTags">
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">CSS</a>
+              </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">JS</a>
