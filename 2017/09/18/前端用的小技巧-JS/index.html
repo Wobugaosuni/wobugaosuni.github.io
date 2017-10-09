@@ -16,7 +16,7 @@
 <meta property="og:site_name" content="我的小空间">
 <meta property="og:description" content="计算字符串的物理长度(px) 使用场景当不确定字符长度，又需要给它一个相对的宽度时，应该怎么做呢？ 第一时间考虑的可能是给一个百分比。字符超过这个长度时，可以让超出的字符用’…’显示。但字符都很短时，宽度就撑不开了 第二种方法是，使用 string.length 计算字符的长度。但一个问题是，汉子和英语的字体宽是不一样的，甚至每个字母的宽都可能不一样 第三种方法，是我目前觉得是第一选择的方法。计算">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2017-10-07T04:53:36.000Z">
+<meta property="og:updated_time" content="2017-10-09T08:09:55.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="前端用的小技巧(JS)">
 <meta name="twitter:description" content="计算字符串的物理长度(px) 使用场景当不确定字符长度，又需要给它一个相对的宽度时，应该怎么做呢？ 第一时间考虑的可能是给一个百分比。字符超过这个长度时，可以让超出的字符用’…’显示。但字符都很短时，宽度就撑不开了 第二种方法是，使用 string.length 计算字符的长度。但一个问题是，汉子和英语的字体宽是不一样的，甚至每个字母的宽都可能不一样 第三种方法，是我目前觉得是第一选择的方法。计算">
@@ -189,7 +189,7 @@
 <li>实现的函数<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="comment">/**</span></div><div class="line"><span class="comment">* 计算字符的长度</span></div><div class="line"><span class="comment">* @param &#123;*&#125; text</span></div><div class="line"><span class="comment">*/</span></div><div class="line"><span class="keyword">export</span> <span class="function"><span class="keyword">function</span> <span class="title">getTextWidth</span>(<span class="params">text</span>) </span>&#123;  <span class="comment">// 参数为单个字符串</span></div><div class="line">  <span class="keyword">const</span> canvas = <span class="built_in">document</span>.createElement(<span class="string">'canvas'</span>) <span class="comment">// 新增 canvas 元素</span></div><div class="line">  <span class="keyword">const</span> context = canvas.getContext(<span class="string">'2d'</span>) <span class="comment">// 返回 canvas 的上下文绘图环境</span></div><div class="line">  <span class="keyword">const</span> metrics = context.measureText(text)  <span class="comment">// 测量字符串的宽</span></div><div class="line">  <span class="keyword">return</span> <span class="built_in">Math</span>.ceil(metrics.width)  <span class="comment">// 向上取整</span></div><div class="line">&#125;</div></pre></td></tr></table></figure>
 </li>
 </ul>
-<h2 id="工具函数-——"><a href="#工具函数-——" class="headerlink" title="工具函数 ——"></a>工具函数 ——</h2>
+
       
 
       
