@@ -6,19 +6,28 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Hexo搭建博客 + Github pages | 我的小空间</title>
+  <title>Hexo搭建博客 + Github pages + 域名绑定(可选) | 我的小空间</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="关于Hexo 中文文档：https://hexo.io/zh-cn/docs/ 是一个快速、简洁且高效的博客框架。使用 Markdown（或其他渲染引擎）解析文章，在几秒内，即可利用靓丽的主题生成静态网页  极速搭建，参考：  http://www.jianshu.com/p/4eaddcbe4d12 http://www.jianshu.com/p/834d7cc0668d  nextT主题教">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Hexo搭建博客 + Github pages">
+<meta property="og:title" content="Hexo搭建博客 + Github pages + 域名绑定(可选)">
 <meta property="og:url" content="http://yoursite.com/2017/09/20/Hexo搭建博客/index.html">
 <meta property="og:site_name" content="我的小空间">
 <meta property="og:description" content="关于Hexo 中文文档：https://hexo.io/zh-cn/docs/ 是一个快速、简洁且高效的博客框架。使用 Markdown（或其他渲染引擎）解析文章，在几秒内，即可利用靓丽的主题生成静态网页  极速搭建，参考：  http://www.jianshu.com/p/4eaddcbe4d12 http://www.jianshu.com/p/834d7cc0668d  nextT主题教">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2017-09-20T12:28:26.000Z">
+<meta property="og:image" content="http://yoursite.com/2017/09/20/Hexo搭建博客/WechatIMG213.jpeg">
+<meta property="og:image" content="http://yoursite.com/2017/09/20/Hexo搭建博客/WechatIMG214.jpeg">
+<meta property="og:image" content="http://yoursite.com/2017/09/20/Hexo搭建博客/WechatIMG215.jpeg">
+<meta property="og:image" content="http://yoursite.com/2017/09/20/Hexo搭建博客/WechatIMG220.jpeg">
+<meta property="og:image" content="http://yoursite.com/2017/09/20/Hexo搭建博客/WechatIMG223.jpeg">
+<meta property="og:image" content="http://yoursite.com/2017/09/20/Hexo搭建博客/WechatIMG222.jpeg">
+<meta property="og:image" content="http://yoursite.com/2017/09/20/Hexo搭建博客/WechatIMG224.jpeg">
+<meta property="og:image" content="http://yoursite.com/2017/09/20/Hexo搭建博客/WechatIMG225.jpeg">
+<meta property="og:updated_time" content="2017-10-09T08:03:42.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hexo搭建博客 + Github pages">
+<meta name="twitter:title" content="Hexo搭建博客 + Github pages + 域名绑定(可选)">
 <meta name="twitter:description" content="关于Hexo 中文文档：https://hexo.io/zh-cn/docs/ 是一个快速、简洁且高效的博客框架。使用 Markdown（或其他渲染引擎）解析文章，在几秒内，即可利用靓丽的主题生成静态网页  极速搭建，参考：  http://www.jianshu.com/p/4eaddcbe4d12 http://www.jianshu.com/p/834d7cc0668d  nextT主题教">
+<meta name="twitter:image" content="http://yoursite.com/2017/09/20/Hexo搭建博客/WechatIMG213.jpeg">
   
     <link rel="alternative" href="/atom.xml" title="我的小空间" type="application/atom+xml">
   
@@ -161,7 +170,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      Hexo搭建博客 + Github pages
+      Hexo搭建博客 + Github pages + 域名绑定(可选)
     </h1>
   
 
@@ -192,11 +201,10 @@
 <p><br></p>
 <h2 id="准备工作"><a href="#准备工作" class="headerlink" title="准备工作"></a>准备工作</h2><p>目的：发布到个人的github网站(username.github.io)</p>
 <ol>
-<li>使用github pages<br>github pages优点：免费托管，自带主题，支持自制页面等</li>
-</ol>
-<p>创建github pages，仓库名为username.github.io，username一定与Owner一致</p>
-<ol>
-<li>安装hexo<br><code>sudo npm i hexo-cli -g</code></li>
+<li><p>使用github pages<br>github pages优点：免费托管，自带主题，支持自制页面等<br>创建github pages，仓库名为username.github.io，username一定与Owner一致</p>
+</li>
+<li><p>安装hexo<br><code>sudo npm i hexo-cli -g</code></p>
+</li>
 </ol>
 <p><br></p>
 <h2 id="编写"><a href="#编写" class="headerlink" title="编写"></a>编写</h2><ol>
@@ -229,6 +237,38 @@
 <p><br></p>
 <h2 id="写作"><a href="#写作" class="headerlink" title="写作"></a>写作</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">hexo new [layout] &lt;title&gt;</div></pre></td></tr></table></figure>
 <p>在命令中指定文章的布局（layout），默认为 post</p>
+<p><br></p>
+<h2 id="域名绑定（可选）"><a href="#域名绑定（可选）" class="headerlink" title="域名绑定（可选）"></a>域名绑定（可选）</h2><p><strong>1. 买域名</strong><br>我是在<a href="https://wanwang.aliyun.com/" target="_blank" rel="external">万网</a>买的域名(<a href="http://annhuang.cn/" target="_blank" rel="external">annhuang.cn</a>)。域名买好之后，提交实名认证即可</p>
+<p><br><br><strong>2. 域名解析，使用dnspod</strong></p>
+<ol>
+<li>需要注册<a href="https://www.dnspod.cn" target="_blank" rel="external">DNSpod</a></li>
+<li>在域名解析里，选择添加域名，不用写<code>http://</code><div style="width: 600px"><br> <img src="/2017/09/20/Hexo搭建博客/WechatIMG213.jpeg" alt="WechatIMG213.jpeg" title=""><br></div></li>
+<li>添加域名</li>
+<li>修改域名的dns地址为<code>f1g1ns1.dnspod.net</code>和<code>f1g1ns2.dnspod.net</code><ol>
+<li>拷贝DNSpod的记录值<div style="width: 600px"><br><img src="/2017/09/20/Hexo搭建博客/WechatIMG214.jpeg" alt="WechatIMG214.jpeg" title=""><br></div></li>
+<li>粘贴到万网上<div style="width: 600px"><br><img src="/2017/09/20/Hexo搭建博客/WechatIMG215.jpeg" alt="WechatIMG215.jpeg" title=""><br></div>
+
+</li>
+</ol>
+</li>
+</ol>
+<p><br><br><strong>3. 域名与github pages进行绑定</strong><br>  具体官方文档参考：<a href="https://help.github.com/articles/setting-up-an-apex-domain/" target="_blank" rel="external">https://help.github.com/articles/setting-up-an-apex-domain/</a></p>
+<ol>
+<li>添加CHAME记录<br>其中CHAME的值为github pages的地址<br>访问github.io时，重定向到annhuang.cn<div style="width: 600px"><br> <img src="/2017/09/20/Hexo搭建博客/WechatIMG220.jpeg" alt="WechatIMG220.jpeg" title=""><br></div></li>
+<li><p>添加A记录</p>
+<ol>
+<li>在github pages仓库上增加域名<div style="width: 600px"><br><img src="/2017/09/20/Hexo搭建博客/WechatIMG223.jpeg" alt="WechatIMG223.jpeg" title=""><br></div></li>
+<li>添加两条A记录<div style="width: 600px"><br><img src="/2017/09/20/Hexo搭建博客/WechatIMG222.jpeg" alt="WechatIMG222.jpeg" title=""><br></div></li>
+<li>在终端ping域名，是否成功<div style="width: 450px"><br><img src="/2017/09/20/Hexo搭建博客/WechatIMG224.jpeg" alt="WechatIMG224.jpeg" title=""><br></div>
+</li>
+</ol>
+</li>
+<li><p>在本地站点目录里的<code>source</code>目录下添加<code>CHAME</code>文件，打开后添加域名信息<code>annhuang.cn</code>，填好之后，重新部署到github pages（hexo -g d）</p>
+</li>
+</ol>
+<p><br><br><strong>配置完成</strong><br>配置完成后，要等dns修改成功。官方说法是要一天以上才可以完成的，一般一小时左右就可以生效。<br>打开域名，就可以看到自己的<a href="http://annhuang.cn" target="_blank" rel="external">博客</a></p>
+<p><br><br><strong>常见问题</strong><br>每次执行<code>hexo d -g</code>命令后，打开域名会有以下报错问题”There isn’t a GitHub Pages here”。原因是每次构建完，在github pages仓库上的域名都为空，需要再一次配置</p>
+<div style="width: 450px"><br>  <img src="/2017/09/20/Hexo搭建博客/WechatIMG225.jpeg" alt="WechatIMG225.jpeg" title=""><br></div>
 
       
 
