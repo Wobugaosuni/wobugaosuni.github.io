@@ -16,7 +16,7 @@
 <meta property="og:site_name" content="我的小空间">
 <meta property="og:description" content="数字格式化问题，1234567890 –&amp;gt; 1,234,567,890  1234let test1 = &apos;123456789012&apos;let format = test1.replace(/\B(?=(\d&amp;#123;3&amp;#125;)+(?!\d))/g, &apos;,&apos;)console.log(format) // 1,234,567,890">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2017-11-21T06:17:54.000Z">
+<meta property="og:updated_time" content="2017-11-21T09:58:07.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="正则的应用">
 <meta name="twitter:description" content="数字格式化问题，1234567890 –&amp;gt; 1,234,567,890  1234let test1 = &apos;123456789012&apos;let format = test1.replace(/\B(?=(\d&amp;#123;3&amp;#125;)+(?!\d))/g, &apos;,&apos;)console.log(format) // 1,234,567,890">
@@ -184,6 +184,10 @@
 <li><code>(?!\d)</code>：第2步中的3个数字不允许后面跟着数字;</li>
 <li><code>(\d{3})+(?!\d)</code>：所以匹配的边界后面必须跟着<code>3*n（n&gt;=1）</code>的数字。<br>最终把匹配到的所有边界换成<code>,</code>即可达成目标</li>
 </ol>
+<blockquote>
+<p>另外还有一个黑科技:</p>
+</blockquote>
+  <figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">(<span class="number">1313124143123</span>).toLocaleString(<span class="string">'en-US'</span>)  <span class="comment">// "1,313,124,143,123"</span></div></pre></td></tr></table></figure>
 <p><br></p>
 <h2 id="去掉字符串左右两边的空格，”-jaw-il-“-–-gt-“jaw-il”"><a href="#去掉字符串左右两边的空格，”-jaw-il-“-–-gt-“jaw-il”" class="headerlink" title="去掉字符串左右两边的空格，” jaw il “ –&gt; “jaw il”"></a>去掉字符串左右两边的空格，” jaw il “ –&gt; “jaw il”</h2>  <figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">trim</span>(<span class="params">str</span>) </span>&#123;</div><div class="line">  <span class="keyword">return</span> str.replace(<span class="regexp">/(^\s*)|(\s*$)/g</span>, <span class="string">""</span>)</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="keyword">let</span> str = <span class="string">"  jaw il "</span></div><div class="line"><span class="built_in">console</span>.log(trim(str)) <span class="comment">// "jaw il"</span></div></pre></td></tr></table></figure>
 
