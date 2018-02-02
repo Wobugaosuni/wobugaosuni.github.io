@@ -6,18 +6,23 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Archives: 2017/10 | 我的小空间</title>
+  <title>javaScript实现大数相加 | 我的小空间</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="前端工程师">
-<meta property="og:type" content="website">
-<meta property="og:title" content="我的小空间">
-<meta property="og:url" content="http://yoursite.com/archives/2017/10/index.html">
+  <meta name="description" content="超大的数看看此例子🌰12345// 例子一9007199254740992 === 9007199254740993   // true// 例子二21111111111111111111111111 === 21111111111111111111111000  // true 按照正常逻辑，例子一和二的输出结果应该是 false 的，但控制台却输出 true">
+<meta name="keywords" content="js">
+<meta property="og:type" content="article">
+<meta property="og:title" content="javaScript实现大数相加">
+<meta property="og:url" content="http://yoursite.com/2018/02/01/javaScript实现大数相加/index.html">
 <meta property="og:site_name" content="我的小空间">
-<meta property="og:description" content="前端工程师">
+<meta property="og:description" content="超大的数看看此例子🌰12345// 例子一9007199254740992 === 9007199254740993   // true// 例子二21111111111111111111111111 === 21111111111111111111111000  // true 按照正常逻辑，例子一和二的输出结果应该是 false 的，但控制台却输出 true">
 <meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="http://yoursite.com/2018/02/01/javaScript实现大数相加/big-number.png">
+<meta property="og:image" content="http://yoursite.com/2018/02/01/javaScript实现大数相加/example.jpeg">
+<meta property="og:updated_time" content="2018-02-02T02:38:47.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="我的小空间">
-<meta name="twitter:description" content="前端工程师">
+<meta name="twitter:title" content="javaScript实现大数相加">
+<meta name="twitter:description" content="超大的数看看此例子🌰12345// 例子一9007199254740992 === 9007199254740993   // true// 例子二21111111111111111111111111 === 21111111111111111111111000  // true 按照正常逻辑，例子一和二的输出结果应该是 false 的，但控制台却输出 true">
+<meta name="twitter:image" content="http://yoursite.com/2018/02/01/javaScript实现大数相加/big-number.png">
   
     <link rel="alternative" href="/atom.xml" title="我的小空间" type="application/atom+xml">
   
@@ -153,136 +158,195 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-javaScript实现大数相加" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      javaScript实现大数相加
+    </h1>
+  
+
+        
+        <a href="/2018/02/01/javaScript实现大数相加/" class="archive-article-date">
+  	<time datetime="2018-02-01T12:54:49.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-02-01</time>
+</a>
+        
+      </header>
     
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><br></p>
+<h2 id="超大的数"><a href="#超大的数" class="headerlink" title="超大的数"></a>超大的数</h2><p>看看此例子🌰<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// 例子一</span></div><div class="line"><span class="number">9007199254740992</span> === <span class="number">9007199254740993</span>   <span class="comment">// true</span></div><div class="line"></div><div class="line"><span class="comment">// 例子二</span></div><div class="line"><span class="number">21111111111111111111111111</span> === <span class="number">21111111111111111111111000</span>  <span class="comment">// true</span></div></pre></td></tr></table></figure></p>
+<p>按照正常逻辑，例子一和二的输出结果应该是 <code>false</code> 的，但控制台却输出 <code>true</code></p>
+<a id="more"></a>
+<p><br></p>
+<h2 id="为何不能直接相加呢"><a href="#为何不能直接相加呢" class="headerlink" title="为何不能直接相加呢"></a>为何不能直接相加呢</h2><ul>
+<li>如下图所示，js采用IEEE754标准中的浮点数算法来表述数字Number.</li>
+<li><strong> js只能精确到个位的最大整数是<code>Math.pow(2, 53); // 9007199254740992</code>（就是2的53次方, 16位数） </strong></li>
+<li>对于超出2的53次方的数字，js是怎么处理的呢？—— <strong>丢弃超出2的53次方的数字后的位数，导致精度丢失 </strong></li>
+</ul>
+<div style="width: 600px"><br>  <img src="/2018/02/01/javaScript实现大数相加/big-number.png" alt="big-number.png" title=""><br></div>
+
+<p><br></p>
+<h2 id="github的开源"><a href="#github的开源" class="headerlink" title="github的开源"></a>github的开源</h2><p>实现大数相加的功能，已经有一些开源的库了<br>不过基于求知欲(面试可能出现)，还是自己实现下好</p>
+<ul>
+<li><a href="https://github.com/MikeMcl/bignumber.js" target="_blank" rel="external">bignumber.js</a></li>
+</ul>
+<p><br></p>
+<h2 id="实现"><a href="#实现" class="headerlink" title="实现"></a>实现</h2><blockquote>
+<p> 思路，如图所示，按小时候的计算方式，从右边往左边开始相加</p>
+<ol>
+<li>将字符串拆分成单个元素的数组，把元素颠倒过来</li>
+<li>从前往后，同一index的元素相加，转成字符串，再拆分成数组</li>
+<li>将相加的结果的最后一位放进结果数组里</li>
+<li>如果还有元素(进位)，放到下一轮相加</li>
+<li>循环完成了。结果都在数组里</li>
+<li>反转数组元素，合并</li>
+<li>还要匹配第一位是0的，去掉</li>
+</ol>
+</blockquote>
+<div style="width: 600px"><br>  <img src="/2018/02/01/javaScript实现大数相加/example.jpeg" alt="example.jpeg" title=""><br></div>
+
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">add</span>(<span class="params">string1, string2</span>) </span>&#123;</div><div class="line">  <span class="function"><span class="keyword">function</span> <span class="title">add</span>(<span class="params">string1, string2</span>) </span>&#123;</div><div class="line">  <span class="comment">// 实现该函数</span></div><div class="line">  <span class="comment">// 先判断，如果小于16位，直接相加</span></div><div class="line">  <span class="keyword">if</span> (string1.length &lt; <span class="number">16</span> &amp;&amp; string2.length &lt;<span class="number">16</span>) &#123;</div><div class="line">    <span class="keyword">return</span> ((+string1) + (+string2)).toString()</div><div class="line">  &#125;</div><div class="line"></div><div class="line">  <span class="comment">/**</span></div><div class="line"><span class="comment">  * 方法一，不能实现大数相加</span></div><div class="line"><span class="comment">  */</span></div><div class="line">  <span class="comment">// return (Number(string1) + Number(string2)).toString()</span></div><div class="line">  <span class="comment">// 大数相加</span></div><div class="line">  <span class="keyword">let</span> list1 = string1.split(<span class="string">''</span>).reverse()   <span class="comment">// 将字符串拆分成单个元素的数组，把元素颠倒过来</span></div><div class="line">  <span class="keyword">let</span> list2 = string2.split(<span class="string">''</span>).reverse()</div><div class="line">  <span class="keyword">let</span> resultList = []  <span class="comment">// 存放相加好的个位数的list</span></div><div class="line">  <span class="keyword">let</span> carry = <span class="number">0</span>  <span class="comment">// 进位</span></div><div class="line">  <span class="keyword">const</span> cycleNumbers = <span class="built_in">Math</span>.max.apply(<span class="built_in">Math</span>, [string1.length, string2.length])  <span class="comment">// 相加的次数</span></div><div class="line"></div><div class="line">  <span class="keyword">let</span> i = <span class="number">0</span></div><div class="line">  <span class="keyword">while</span> (i &lt;= cycleNumbers) &#123;</div><div class="line">    unitTotalList = (<span class="built_in">Number</span>(list1.shift() || <span class="string">'0'</span>)  + <span class="built_in">Number</span>(list2.shift() || <span class="string">'0'</span>) + carry).toString().split(<span class="string">''</span>)  <span class="comment">// 个位数相加</span></div><div class="line">    resultList.push(unitTotalList.pop());  <span class="comment">// 把结果放进list里</span></div><div class="line"></div><div class="line">    carry = <span class="built_in">Number</span>(unitTotalList.pop() || <span class="string">'0'</span>)  <span class="comment">// 进位的数字。默认0</span></div><div class="line">    <span class="comment">// console.log('carry:', carry)</span></div><div class="line"></div><div class="line">    i++</div><div class="line">  &#125;</div><div class="line">  <span class="comment">// console.log("resultList:", resultList);</span></div><div class="line"></div><div class="line">  <span class="keyword">return</span> resultList.reverse().join(<span class="string">''</span>).replace(<span class="regexp">/^0/gi</span>, <span class="string">''</span>)  <span class="comment">// 把list颠倒过来，合并。如果最大的个位数是0，丢弃</span></div><div class="line"></div><div class="line">  <span class="comment">/**</span></div><div class="line"><span class="comment">  * other</span></div><div class="line"><span class="comment">  */</span></div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="built_in">module</span>.exports = add</div></pre></td></tr></table></figure>
+<p><br></p>
+<h2 id="文档参考"><a href="#文档参考" class="headerlink" title="文档参考"></a>文档参考</h2><ul>
+<li><a href="http://www.plqblog.com/views/article.php?id=29" target="_blank" rel="external">js实现大数相加</a></li>
+</ul>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
       
       
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2017" class="archive-year">2017</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/10/26/JS精炼/" class="archive-article-date">
-  	<time datetime="2017-10-26T06:57:01.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-10-26</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/10/26/JS精炼/">not defined 和 undefined</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">JS</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">js</a>
         		</li>
       		
 		</ul>
 	</div>
 
-          
+      
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="http://s.jiathis.com/qrcode.php?url=http://yoursite.com/2018/02/01/javaScript实现大数相加/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/10/18/开发小工具/" class="archive-article-date">
-  	<time datetime="2017-10-18T07:02:23.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-10-18</time>
-</a>
+<nav id="article-nav">
+  
+  
+    <a href="/2017/11/21/正则的应用/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">正则的应用</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/10/18/开发小工具/">开发小工具-自动生成目录树</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">小工具</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
+        
+        
+        <div class="toc-container tooltip-left">
+            <i class="icon-font icon-category"></i>
+            <div class="tooltip tooltip-east">
+                <span class="tooltip-item">
+                </span>
+                <span class="tooltip-content">
+                    <div class="toc-article">
+                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#超大的数"><span class="toc-number">1.</span> <span class="toc-text">超大的数</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#为何不能直接相加呢"><span class="toc-number">2.</span> <span class="toc-text">为何不能直接相加呢</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#github的开源"><span class="toc-number">3.</span> <span class="toc-text">github的开源</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#实现"><span class="toc-number">4.</span> <span class="toc-text">实现</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#文档参考"><span class="toc-number">5.</span> <span class="toc-text">文档参考</span></a></li></ol>
+                    </div>
+                </span>
+            </div>
         </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
+        
+    </div>
+</aside>
+
+
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/10/17/移动端1像素的实现/" class="archive-article-date">
-  	<time datetime="2017-10-17T06:40:11.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-10-17</time>
-</a>
-        </div>
-    	 
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/10/17/移动端1像素的实现/">移动端1像素的实现</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">CSS</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
   
 
-    
+  
+
+  
 
 
           </div>
@@ -305,8 +369,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: true,
