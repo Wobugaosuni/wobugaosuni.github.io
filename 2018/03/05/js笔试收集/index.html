@@ -16,7 +16,7 @@
 <meta property="og:site_name" content="我的小空间">
 <meta property="og:description" content="关于setTimeout、Promise.then和常规的js的执行顺序如题，下面代码的执行顺序是？12345678910111213console.log(1)setTimeout(() =&amp;gt; &amp;#123;  console.log(2)&amp;#125;, 0)new Promise(resolve =&amp;gt; &amp;#123;  console.log(3);  resolve()&amp;#125;)">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-03-05T06:51:09.000Z">
+<meta property="og:updated_time" content="2018-03-15T03:45:53.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="js笔试收集">
 <meta name="twitter:description" content="关于setTimeout、Promise.then和常规的js的执行顺序如题，下面代码的执行顺序是？12345678910111213console.log(1)setTimeout(() =&amp;gt; &amp;#123;  console.log(2)&amp;#125;, 0)new Promise(resolve =&amp;gt; &amp;#123;  console.log(3);  resolve()&amp;#125;)">
@@ -181,7 +181,7 @@
 <ul>
 <li><p>虽然<code>setTimeout</code>设置了立马执行，但在不同浏览器中，它是有延时的。chrome延时4ms，旧的ie延时1/60s。是一个异步执行的函数，在以上代码中最后执行</p>
 </li>
-<li><p><code>Promise.then()</code>也是一个异步的函数，但跟<code>setTimeout</code>相比，<code>Promise.then()</code>是一个’micro task<code>，</code>setTimeout<code>是一个&#39;normal task&#39;，</code>Promise.then()<code>远比</code>setTimeout`执行的快</p>
+<li><p><code>Promise.then()</code>也是一个异步的函数，但跟<code>setTimeout</code>相比，<code>Promise.then()</code>是一个<code>micro task</code>，<code>setTimeout</code>是一个<code>normal task</code>，<code>Promise.then()</code>远比<code>setTimeout</code>执行的快</p>
 </li>
 <li><p><code>Promise.resolve()</code>是同步的，按顺序执行</p>
 </li>
