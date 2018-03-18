@@ -6,18 +6,26 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Tag: JS | 我的小空间</title>
+  <title>深入理解JS的连等赋值 | 我的小空间</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="前端工程师">
-<meta property="og:type" content="website">
-<meta property="og:title" content="我的小空间">
-<meta property="og:url" content="http://yoursite.com/tags/JS/index.html">
+  <meta name="description" content="热门问题的抛出1234567var a = &amp;#123;n: 1&amp;#125;var b = aa.x = a = &amp;#123;n:2&amp;#125;console.log(&apos;a.x:&apos;, a.x)  // undefinedconsole.log(&apos;a:&apos;, a)  // &amp;#123;n: 2&amp;#125;console.log(&apos;b:&apos;, b)  // &amp;#123;n: 1, x: &amp;#123;n:">
+<meta name="keywords" content="JS">
+<meta property="og:type" content="article">
+<meta property="og:title" content="深入理解JS的连等赋值">
+<meta property="og:url" content="http://yoursite.com/2018/03/18/深入理解JS的连等赋值/index.html">
 <meta property="og:site_name" content="我的小空间">
-<meta property="og:description" content="前端工程师">
+<meta property="og:description" content="热门问题的抛出1234567var a = &amp;#123;n: 1&amp;#125;var b = aa.x = a = &amp;#123;n:2&amp;#125;console.log(&apos;a.x:&apos;, a.x)  // undefinedconsole.log(&apos;a:&apos;, a)  // &amp;#123;n: 2&amp;#125;console.log(&apos;b:&apos;, b)  // &amp;#123;n: 1, x: &amp;#123;n:">
 <meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="http://yoursite.com/2018/03/18/深入理解JS的连等赋值/p1.jpeg">
+<meta property="og:image" content="http://yoursite.com/2018/03/18/深入理解JS的连等赋值/p3.png">
+<meta property="og:image" content="http://yoursite.com/2018/03/18/深入理解JS的连等赋值/p4.png">
+<meta property="og:image" content="http://yoursite.com/2018/03/18/深入理解JS的连等赋值/p2.jpeg">
+<meta property="og:image" content="http://yoursite.com/2018/03/18/深入理解JS的连等赋值/p5.jpeg">
+<meta property="og:updated_time" content="2018-03-18T08:02:12.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="我的小空间">
-<meta name="twitter:description" content="前端工程师">
+<meta name="twitter:title" content="深入理解JS的连等赋值">
+<meta name="twitter:description" content="热门问题的抛出1234567var a = &amp;#123;n: 1&amp;#125;var b = aa.x = a = &amp;#123;n:2&amp;#125;console.log(&apos;a.x:&apos;, a.x)  // undefinedconsole.log(&apos;a:&apos;, a)  // &amp;#123;n: 2&amp;#125;console.log(&apos;b:&apos;, b)  // &amp;#123;n: 1, x: &amp;#123;n:">
+<meta name="twitter:image" content="http://yoursite.com/2018/03/18/深入理解JS的连等赋值/p1.jpeg">
   
     <link rel="alternative" href="/atom.xml" title="我的小空间" type="application/atom+xml">
   
@@ -153,202 +161,109 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
+            <article id="post-深入理解JS的连等赋值" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
   
+    <h1 class="article-title" itemprop="name">
+      深入理解JS的连等赋值
+    </h1>
   
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2018" class="archive-year">2018</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/03/18/深入理解JS的连等赋值/" class="archive-article-date">
+
+        
+        <a href="/2018/03/18/深入理解JS的连等赋值/" class="archive-article-date">
   	<time datetime="2018-03-18T06:39:40.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-03-18</time>
 </a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/03/18/深入理解JS的连等赋值/">深入理解JS的连等赋值</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">JS</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
+        
+      </header>
     
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/03/05/关于class的一些总结/" class="archive-article-date">
-  	<time datetime="2018-03-05T06:52:14.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-03-05</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/03/05/关于class的一些总结/">关于class的一些总结</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">JS</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/03/05/js笔试收集/" class="archive-article-date">
-  	<time datetime="2018-03-05T06:26:25.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-03-05</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/03/05/js笔试收集/">js笔试收集</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">持续更新</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">JS</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/02/11/博大精深的this/" class="archive-article-date">
-  	<time datetime="2018-02-10T20:00:23.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-02-11</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/02/11/博大精深的this/">博大精深的this</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">JS</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
+    <div class="article-entry" itemprop="articleBody">
       
-        </div></section>
+        <h2 id="热门问题的抛出"><a href="#热门问题的抛出" class="headerlink" title="热门问题的抛出"></a>热门问题的抛出</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> a = &#123;<span class="attr">n</span>: <span class="number">1</span>&#125;</div><div class="line"><span class="keyword">var</span> b = a</div><div class="line">a.x = a = &#123;<span class="attr">n</span>:<span class="number">2</span>&#125;</div><div class="line"></div><div class="line"><span class="built_in">console</span>.log(<span class="string">'a.x:'</span>, a.x)  <span class="comment">// undefined</span></div><div class="line"><span class="built_in">console</span>.log(<span class="string">'a:'</span>, a)  <span class="comment">// &#123;n: 2&#125;</span></div><div class="line"><span class="built_in">console</span>.log(<span class="string">'b:'</span>, b)  <span class="comment">// &#123;n: 1, x: &#123;n: 2&#125;&#125;</span></div></pre></td></tr></table></figure>
+<a id="more"></a>
+<p>按照人脑的思维:</p>
+<ul>
+<li>前两步，变量<code>a</code>等于<code>{n: 1}</code>。通过赋值，变量b等于<code>{n: 1}</code>。</li>
+<li>连等的时候，从右往左执行。变量<code>a</code>等于<code>{n: 2}</code>，<code>a</code>多了一个<code>x</code>的属性，属性值是<code>{n: 2}</code>。</li>
+<li>打印出来分别是：<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">console</span>.log(<span class="string">'a.x:'</span>, a.x)  <span class="comment">// &#123;n: 2&#125;  X</span></div><div class="line"><span class="built_in">console</span>.log(<span class="string">'a:'</span>, a)  <span class="comment">// &#123;n: 2, x; &#123;n: 2&#125;&#125;  X</span></div><div class="line"><span class="built_in">console</span>.log(<span class="string">'b:'</span>, b)  <span class="comment">// &#123;n: 1&#125;  X</span></div></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>怎么想也想不通为啥<code>a.x</code>是 <code>undefined</code>，<code>a</code>是<code>{n: 2}</code>，<code>b</code>是<code>{n: 1, x: {n: 2}}</code></p>
+<h2 id="要解决这个问题，要搞懂以下东西"><a href="#要解决这个问题，要搞懂以下东西" class="headerlink" title="要解决这个问题，要搞懂以下东西"></a>要解决这个问题，要搞懂以下东西</h2><ul>
+<li>内存的运行机制</li>
+<li>JS引擎的解析过程，从左往右</li>
+<li>连等赋值的执行方向，从右往左</li>
+</ul>
+<h2 id="内存的运行机制"><a href="#内存的运行机制" class="headerlink" title="内存的运行机制"></a>内存的运行机制</h2><p>说说我的理解吧，老师教的~</p>
+<ul>
+<li>对于计算机内存来说，它存的东西分为两块，一块存储<code>变量名</code>，一块存储<code>变量值</code></li>
+<li>那为什么变量值值占这么多空间呢？对于计算机来说，变量名只是一个字符串，占非常小的空间。但变量值就不一样了，当数值非常大时，占的空间就很大</li>
+<li>所以就有了<strong>内存回收机制</strong>，简单理解，就是当变量值没有被引用时，这个变量值就会被销毁，节省内存</li>
+</ul>
+<div style="width: 450px"><br>  <img src="/2018/03/18/深入理解JS的连等赋值/p1.jpeg" alt="p1.jpeg" title=""><br></div>
+
+<p>例如图示，<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> a = &#123;<span class="attr">n</span>: <span class="number">1</span>&#125;</div><div class="line"><span class="keyword">var</span> b = &#123;<span class="attr">n</span>: <span class="number">2</span>&#125;</div><div class="line"><span class="keyword">var</span> c = <span class="string">'123'</span></div></pre></td></tr></table></figure></p>
+<p>每个变量值存在于内存的前提是，有变量名引用它</p>
+<p>当我做以下操作时：<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">c = b</div></pre></td></tr></table></figure></p>
+<p>‘123’这个变量值就没有变量名引用了，就会被销毁</p>
+<h2 id="通过开头的例子解析JS引擎的解析过程、连等赋值的执行方向"><a href="#通过开头的例子解析JS引擎的解析过程、连等赋值的执行方向" class="headerlink" title="通过开头的例子解析JS引擎的解析过程、连等赋值的执行方向"></a>通过开头的例子解析JS引擎的解析过程、连等赋值的执行方向</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> a = &#123;<span class="attr">n</span>: <span class="number">1</span>&#125;</div><div class="line"><span class="keyword">var</span> b = a</div><div class="line">a.x = a = &#123;<span class="attr">n</span>:<span class="number">2</span>&#125;</div></pre></td></tr></table></figure>
+<p>这道题需要用计算机的思维去理解，用人的思维的话，会搞不懂的。虽然代码写的是<code>=</code>，但对于计算机而言，是一个<strong>引用/指向</strong>的过程</p>
+<ul>
+<li><p>如下图所示，<code>a</code>的引用是<code>{n: 1}</code>，<code>b</code>的引用是<code>{n: 1}</code>。</p>
+<div style="width: 250px"><br>  <img src="/2018/03/18/深入理解JS的连等赋值/p3.png" alt="p3.png" title=""><br></div>
+</li>
+<li><p>重点是，执行到<code>a.x = a = {n:2}</code>，并不是直接的从右往左的执行过程。<strong>而是计算机会先从左往右解析各个变量名，转换成变量值（计算机只会记变量值，人的话记变量名）。再从右往左执行赋值。</strong></p>
+<ol>
+<li><p>如图截取的片段，计算机先从左往右解析各个变量名。第一个<code>a</code>指向<code>{n: 1}</code>， 第二个<code>a</code>指向<code>{n:1}</code>。变量名解析完成。就是下图这样的</p>
+<div style="width: 250px"><br> <img src="/2018/03/18/深入理解JS的连等赋值/p4.png" alt="p4.png" title=""><br></div>
+</li>
+<li><p>解析完成后，从右往左执行赋值</p>
+<ul>
+<li>第二个等号。<code>a</code>重新指向了<code>{n: 2}</code>。根据内存回收机制，因为<code>a</code>不再指向<code>{n: 1}</code>了，<code>{n: 1}</code>会被回收吗？ —– 答案是不会，因为<code>b</code>还在引用<code>{n: 1}</code></li>
+<li>第一个等号。重头戏来了，<code>a.x = (a = {n: 2})</code>前面说了，解析的时候，<code>a.x</code>被解析成了<code>{n: 1}.x</code>。所以执行赋值的时候，可以这样理解：<code>{n: 1}.x = {n: 2}</code>。<code>{n: 1}</code>多了一个<code>x</code>的属性，属性值是<code>{n: 2}</code>。也就是内存的变量值<code>{n: 1}</code>变成了<code>{n: 1, x: {n: 2}</code></li>
+</ul>
+<div style="width: 550px"><br> <img src="/2018/03/18/深入理解JS的连等赋值/p2.jpeg" alt="p2.jpeg" title=""><br></div>
+</li>
+<li><p>前两步解析 + 赋值完成后，就继续执行下面的代码了</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">console</span>.log(<span class="string">'a.x:'</span>, a.x)</div><div class="line"><span class="built_in">console</span>.log(<span class="string">'a:'</span>, a)</div><div class="line"><span class="built_in">console</span>.log(<span class="string">'b:'</span>, b)</div></pre></td></tr></table></figure>
+<ul>
+<li><code>a.x</code>，<code>a</code>指向<code>{n: 2}</code>。但<code>{n: 2}</code>并没有<code>x</code>的属性，所以是<code>undefined</code></li>
+<li><code>a</code>，很明显是<code>{n: 2}</code></li>
+<li><code>b</code>，指向的是<code>{n: 1, x: {n: 2}</code></li>
+</ul>
+</li>
+</ol>
+</li>
+</ul>
+<h2 id="延伸"><a href="#延伸" class="headerlink" title="延伸"></a>延伸</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> a = &#123;<span class="attr">n</span>: <span class="number">1</span>&#125;</div><div class="line"><span class="keyword">var</span> b = a</div><div class="line">a.x = a</div></pre></td></tr></table></figure>
+<p>a、b的值分别是？</p>
+<ul>
+<li><p>直接上图</p>
+<div style="width: 250px"><br>  <img src="/2018/03/18/深入理解JS的连等赋值/p5.jpeg" alt="p5.jpeg" title=""><br></div>
+</li>
+<li><p>解析</p>
+<ul>
+<li><code>a</code>和<code>b</code>都同时指向对象<code>{n: 1}</code></li>
+<li>当执行<code>a.x = a</code>，先从左往右解析，第一个<code>a</code>和第二个a都指向<code>{n: 1}</code>。解析完之后开始赋值，<code>{n: 1}</code>多了一个<code>x</code>的属性，<code>x</code>指向它自己<code>{n: 1}</code>，造成了无限递归。</li>
+<li>a、b 都指向`{n: 1, x: {n: 1, x: {…}}</li>
+</ul>
+</li>
+<li><p>所以一般都不会写这样的程序，非常耗内存</p>
+</li>
+</ul>
+<h2 id="文档参考"><a href="#文档参考" class="headerlink" title="文档参考"></a>文档参考</h2><ul>
+<li><a href="https://segmentfault.com/a/1190000004224719aaaaaaaa" target="_blank" rel="external">由ES规范学JavaScript(二)：深入理解“连等赋值”问题</a></li>
+</ul>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
       
       
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2017" class="archive-year">2017</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/10/26/JS精炼/" class="archive-article-date">
-  	<time datetime="2017-10-26T06:57:01.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-10-26</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/10/26/JS精炼/">not defined 和 undefined</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
@@ -360,65 +275,119 @@
 		</ul>
 	</div>
 
-          
+      
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="http://s.jiathis.com/qrcode.php?url=http://yoursite.com/2018/03/18/深入理解JS的连等赋值/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/09/18/前端用的小技巧-JS/" class="archive-article-date">
-  	<time datetime="2017-09-18T12:06:38.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-09-18</time>
-</a>
+<nav id="article-nav">
+  
+  
+    <a href="/2018/03/05/关于class的一些总结/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">关于class的一些总结</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/09/18/前端用的小技巧-JS/">前端用的小技巧(JS，Util)</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">持续更新</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">JS</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Util</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
+        
+        
+        <div class="toc-container tooltip-left">
+            <i class="icon-font icon-category"></i>
+            <div class="tooltip tooltip-east">
+                <span class="tooltip-item">
+                </span>
+                <span class="tooltip-content">
+                    <div class="toc-article">
+                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#热门问题的抛出"><span class="toc-number">1.</span> <span class="toc-text">热门问题的抛出</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#要解决这个问题，要搞懂以下东西"><span class="toc-number">2.</span> <span class="toc-text">要解决这个问题，要搞懂以下东西</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#内存的运行机制"><span class="toc-number">3.</span> <span class="toc-text">内存的运行机制</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#通过开头的例子解析JS引擎的解析过程、连等赋值的执行方向"><span class="toc-number">4.</span> <span class="toc-text">通过开头的例子解析JS引擎的解析过程、连等赋值的执行方向</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#延伸"><span class="toc-number">5.</span> <span class="toc-text">延伸</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#文档参考"><span class="toc-number">6.</span> <span class="toc-text">文档参考</span></a></li></ol>
+                    </div>
+                </span>
+            </div>
         </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
+        
+    </div>
+</aside>
+
+
+
   
   
-    </div></section>
   
 
-    
+  
+
+  
+
+  
 
 
           </div>
@@ -441,9 +410,9 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
+		isPost: true,
 		isArchive: false,
-		isTag: true,
+		isTag: false,
 		isCategory: false,
 		open_in_new: true,
 		toc_hide_index: true,
