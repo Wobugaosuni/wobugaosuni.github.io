@@ -22,7 +22,7 @@
 <meta property="og:image" content="http://yoursite.com/2018/05/30/创建一个range-input控制的环形图/4.png">
 <meta property="og:image" content="http://yoursite.com/2018/05/30/创建一个range-input控制的环形图/5.png">
 <meta property="og:image" content="http://yoursite.com/2018/05/30/创建一个range-input控制的环形图/6.png">
-<meta property="og:updated_time" content="2018-05-30T03:11:46.000Z">
+<meta property="og:updated_time" content="2018-05-30T07:29:42.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="创建一个range-input控制的环形图">
 <meta name="twitter:description" content="使用圆锥渐变和css变量创建一个range input控制的环形图 项目演示演示地址：https://wobugaosuni.github.io/rangeInput/github源码：https://github.com/Wobugaosuni/rangeInput.git">
@@ -240,9 +240,10 @@
 <p>output:</p>
 <div style="width: 700px"><br>  <img src="/2018/05/30/创建一个range-input控制的环形图/6.png" alt="6.png" title=""><br></div>
 
-<h2 id="梳理5-js更改伪元素的样式"><a href="#梳理5-js更改伪元素的样式" class="headerlink" title="梳理5-js更改伪元素的样式"></a>梳理5-js更改伪元素的样式</h2><p>js操作Dom元素并不包括伪元素。如果想通过js修改伪元素的样式。可以使用<code>addRule()</code>的方法</p>
+<h2 id="梳理5-js更改伪元素的样式"><a href="#梳理5-js更改伪元素的样式" class="headerlink" title="梳理5-js更改伪元素的样式"></a>梳理5-js更改伪元素的样式</h2><p>在网页的 <code>document</code> 里有个属性叫做 <code>styleSheet</code>，这个属性会将网页中所有用到的样式列出</p>
+<p>js操作Dom元素并不包括伪元素。如果想通过js修改伪元素的样式。可以使用<code>addRule()</code>的方法</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">document</span>.styleSheets[<span class="number">0</span>].addRule(<span class="string">'output:before'</span>,<span class="string">'transform:'</span> + <span class="string">'translate(0,'</span> + rangeValue / <span class="number">-100</span> * (trackWidth - thumbDiameter) + <span class="string">'px)'</span>)</div></pre></td></tr></table></figure>
-<p>第一个参数是伪元素，第二个参数是相应的样式</p>
+<p>两个参数都是字符串。<br>第一个参数是伪元素，第二个参数是相应的样式</p>
 <h2 id="文档参考"><a href="#文档参考" class="headerlink" title="文档参考"></a>文档参考</h2><ul>
 <li><p><a href="http://www.zhangxinxu.com/wordpress/2012/05/getcomputedstyle-js-getpropertyvalue-currentstyle/" target="_blank" rel="external">张鑫旭，获取元素CSS值之getComputedStyle方法熟悉</a></p>
 </li>
@@ -339,6 +340,15 @@
 
   
 <nav id="article-nav">
+  
+    <a href="/2018/05/30/水滴扩散动画的实现/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          水滴扩散动画的实现
+        
+      </div>
+    </a>
   
   
     <a href="/2018/04/10/全方位科学上网/" id="article-nav-older" class="article-nav-link-wrap">
@@ -486,11 +496,15 @@
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">其他</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">JS</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">其他</a>
+                <a href="javascript:void(0)" class="js-tag color5">CSS3</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -498,7 +512,7 @@
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">Linux</a>
+                <a href="javascript:void(0)" class="js-tag color5">Animation</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -506,11 +520,11 @@
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">正则</a>
+                <a href="javascript:void(0)" class="js-tag color1">Linux</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">CSS3</a>
+                <a href="javascript:void(0)" class="js-tag color3">正则</a>
               </li>
             
             <div class="clearfix"></div>
