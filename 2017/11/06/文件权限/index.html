@@ -179,7 +179,7 @@
     <div class="article-entry" itemprop="articleBody">
       
         <h2 id="应用场景"><a href="#应用场景" class="headerlink" title="应用场景"></a>应用场景</h2><p>写了一个脚本<code>hello</code>，目的是，每次执行时，都打印输出<code>console.log(&#39;hello world&#39;)</code></p>
-<div style="width: 500px"><br>  <img src="/2017/11/06/文件权限/WechatIMG248.jpeg" alt="WechatIMG248.jpeg" title=""><br></div><br><a id="more"></a><br><br>但执行后，报错如下：<br><div style="width: 350px"><br>  <img src="/2017/11/06/文件权限/WechatIMG249.jpeg" alt="WechatIMG249.jpeg" title=""><br></div>
+<div style="width: 500px"><br>  <img src="/2017/11/06/文件权限/WechatIMG248.jpeg"><br></div><br><a id="more"></a><br><br>但执行后，报错如下：<br><div style="width: 350px"><br>  <img src="/2017/11/06/文件权限/WechatIMG249.jpeg"><br></div>
 
 <p>为什么呢？因为我只有<code>读</code>和<code>写</code>的权限，没有<code>执行</code>的权限</p>
 <p>怎么解决呢？只要改变我对文件操作的权限就可以了：<code>chmod 755 hello</code></p>
@@ -197,11 +197,11 @@
 <p>一个新的文件权限 644<br>一个新的目录权限 755</p>
 <h2 id="例子"><a href="#例子" class="headerlink" title="例子"></a>例子</h2><p>600代表： rw- — —<br>644代表： rw- r– r–<br>755代表： rwx r-x r-x</p>
 <ul>
-<li>修改文件权限<br>在当前目录下：<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># 将mac-init.sh的权限由644改成755</span></div><div class="line">chmod 755 mac-init.sh</div></pre></td></tr></table></figure>
+<li>修改文件权限<br>在当前目录下：<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 将mac-init.sh的权限由644改成755</span></span><br><span class="line">chmod 755 mac-init.sh</span><br></pre></td></tr></table></figure>
 </li>
 </ul>
 <h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><ul>
-<li><a href="http://www.ruanyifeng.com/blog/2015/05/command-line-with-node.html" target="_blank" rel="external">http://www.ruanyifeng.com/blog/2015/05/command-line-with-node.html</a></li>
+<li><a href="http://www.ruanyifeng.com/blog/2015/05/command-line-with-node.html" target="_blank" rel="noopener">http://www.ruanyifeng.com/blog/2015/05/command-line-with-node.html</a></li>
 </ul>
 
       
@@ -445,6 +445,10 @@
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">webpack</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">其他</a>
               </li>
              
@@ -457,15 +461,15 @@
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">小工具</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">Linux</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">正则</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">小工具</a>
               </li>
              
               <li class="article-tag-list-item">

@@ -178,16 +178,16 @@
     <div class="article-entry" itemprop="articleBody">
       
         <h2 id="自动生成目录树"><a href="#自动生成目录树" class="headerlink" title="自动生成目录树"></a>自动生成目录树</h2><h4 id="使用场景"><a href="#使用场景" class="headerlink" title="使用场景"></a>使用场景</h4><p>写项目说明时，经常需要列出项目的树状目录结构说明，一开始我是手写的，但敲着敲着，觉得太麻烦了！<br>这个时候我们就需要一个工具来实现这个小小的需求<br><a id="more"></a></p>
-<div style="width: 500px"><br>  <img src="/2017/10/18/开发小工具/WechatIMG232.jpeg" alt="WechatIMG232.jpeg" title=""><br></div>
+<div style="width: 500px"><br>  <img src="/2017/10/18/开发小工具/WechatIMG232.jpeg"><br></div>
 
 <h4 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h4><p>前提：本地需安装了homebrew</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="comment">## 安装</span></div><div class="line">brew install tree</div><div class="line"></div><div class="line"><span class="comment">## 帮助</span></div><div class="line">tree --<span class="built_in">help</span></div></pre></td></tr></table></figure>
-<h4 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line"><span class="comment">## 将当前目录所有深度下的文件都遍历出来</span></div><div class="line">tree</div><div class="line"></div><div class="line"><span class="comment">## -a 输出所有目录，包括隐藏的</span></div><div class="line">tree -a</div><div class="line"></div><div class="line"><span class="comment">## -d 只输出目录</span></div><div class="line">tree -d</div><div class="line"></div><div class="line"><span class="comment">## -L 2 输出文件夹遍历层数</span></div><div class="line">tree -L 2</div><div class="line"></div><div class="line"><span class="comment">## -I 忽略的目录或文件（I:ignore)，使用|连接多个忽略的目录或文件</span></div><div class="line">tree -I <span class="string">"node_modules|dist"</span></div><div class="line"></div><div class="line"><span class="comment">## -C 在文件和目录清单加上色彩，便于区分各种类型</span></div><div class="line">tree -C</div></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">## 安装</span></span><br><span class="line">brew install tree</span><br><span class="line"></span><br><span class="line"><span class="comment">## 帮助</span></span><br><span class="line">tree --<span class="built_in">help</span></span><br></pre></td></tr></table></figure>
+<h4 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">## 将当前目录所有深度下的文件都遍历出来</span></span><br><span class="line">tree</span><br><span class="line"></span><br><span class="line"><span class="comment">## -a 输出所有目录，包括隐藏的</span></span><br><span class="line">tree -a</span><br><span class="line"></span><br><span class="line"><span class="comment">## -d 只输出目录</span></span><br><span class="line">tree -d</span><br><span class="line"></span><br><span class="line"><span class="comment">## -L 2 输出文件夹遍历层数</span></span><br><span class="line">tree -L 2</span><br><span class="line"></span><br><span class="line"><span class="comment">## -I 忽略的目录或文件（I:ignore)，使用|连接多个忽略的目录或文件</span></span><br><span class="line">tree -I <span class="string">"node_modules|dist"</span></span><br><span class="line"></span><br><span class="line"><span class="comment">## -C 在文件和目录清单加上色彩，便于区分各种类型</span></span><br><span class="line">tree -C</span><br></pre></td></tr></table></figure>
 <p>命令可以叠加使用，如：<br><code>tree -a -I &quot;node_modules|.git&quot;</code><br>列出所有的包括隐藏的目录或文件，忽略node_modules和.git目录</p>
 <h4 id="文档参考："><a href="#文档参考：" class="headerlink" title="文档参考："></a>文档参考：</h4><ul>
-<li><a href="https://rschu.me/list-a-directory-with-tree-command-on-mac-os-x-3b2d4c4a4827" target="_blank" rel="external">https://rschu.me/list-a-directory-with-tree-command-on-mac-os-x-3b2d4c4a4827</a></li>
-<li><a href="https://superuser.com/questions/359723/mac-os-x-equivalent-of-the-ubuntu-tree-command" target="_blank" rel="external">https://superuser.com/questions/359723/mac-os-x-equivalent-of-the-ubuntu-tree-command</a></li>
-<li><a href="http://qingtong234.github.io/2016/01/07/mac%E4%B8%8A%E4%BD%BF%E7%94%A8tree%E5%91%BD%E4%BB%A4%E7%94%9F%E6%88%90%E6%A0%91%E7%8A%B6%E7%9B%AE%E5%BD%95/" target="_blank" rel="external">http://qingtong234.github.io/2016/01/07/mac%E4%B8%8A%E4%BD%BF%E7%94%A8tree%E5%91%BD%E4%BB%A4%E7%94%9F%E6%88%90%E6%A0%91%E7%8A%B6%E7%9B%AE%E5%BD%95/</a></li>
+<li><a href="https://rschu.me/list-a-directory-with-tree-command-on-mac-os-x-3b2d4c4a4827" target="_blank" rel="noopener">https://rschu.me/list-a-directory-with-tree-command-on-mac-os-x-3b2d4c4a4827</a></li>
+<li><a href="https://superuser.com/questions/359723/mac-os-x-equivalent-of-the-ubuntu-tree-command" target="_blank" rel="noopener">https://superuser.com/questions/359723/mac-os-x-equivalent-of-the-ubuntu-tree-command</a></li>
+<li><a href="http://qingtong234.github.io/2016/01/07/mac%E4%B8%8A%E4%BD%BF%E7%94%A8tree%E5%91%BD%E4%BB%A4%E7%94%9F%E6%88%90%E6%A0%91%E7%8A%B6%E7%9B%AE%E5%BD%95/" target="_blank" rel="noopener">http://qingtong234.github.io/2016/01/07/mac%E4%B8%8A%E4%BD%BF%E7%94%A8tree%E5%91%BD%E4%BB%A4%E7%94%9F%E6%88%90%E6%A0%91%E7%8A%B6%E7%9B%AE%E5%BD%95/</a></li>
 </ul>
 
       
@@ -431,6 +431,10 @@
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">webpack</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">其他</a>
               </li>
              
@@ -443,15 +447,15 @@
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">小工具</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">Linux</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">正则</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">小工具</a>
               </li>
              
               <li class="article-tag-list-item">

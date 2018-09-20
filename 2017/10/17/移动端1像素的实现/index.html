@@ -328,20 +328,20 @@
 </ul>
 <ol>
 <li><p>新建mixin.stylus文件，用来放通用的方法</p>
-<figure class="highlight stylus"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// stylus的方法，是一个函数，接收一个变量的参数</span></div><div class="line"><span class="function"><span class="title">border1px</span><span class="params">(<span class="variable">$color</span>)</span></span></div><div class="line">  <span class="attribute">position</span>: relative</div><div class="line">  &amp;::after</div><div class="line">    <span class="attribute">display</span>: block</div><div class="line">    <span class="attribute">position</span>: absolute</div><div class="line">    <span class="attribute">bottom</span>: <span class="number">0</span></div><div class="line">    <span class="attribute">width</span>: <span class="number">100%</span>  // 脱离文档流后没有宽度，需要给它一个宽度</div><div class="line">    <span class="attribute">content</span>: <span class="string">''</span></div><div class="line">    <span class="attribute">border-top</span>: <span class="number">1px</span> solid <span class="variable">$color</span></div></pre></td></tr></table></figure>
+<figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// stylus的方法，是一个函数，接收一个变量的参数</span></span><br><span class="line"><span class="function"><span class="title">border1px</span><span class="params">(<span class="variable">$color</span>)</span></span></span><br><span class="line">  <span class="attribute">position</span>: relative</span><br><span class="line">  &amp;::after</span><br><span class="line">    <span class="attribute">display</span>: block</span><br><span class="line">    <span class="attribute">position</span>: absolute</span><br><span class="line">    <span class="attribute">bottom</span>: <span class="number">0</span></span><br><span class="line">    <span class="attribute">width</span>: <span class="number">100%</span>  // 脱离文档流后没有宽度，需要给它一个宽度</span><br><span class="line">    <span class="attribute">content</span>: <span class="string">''</span></span><br><span class="line">    <span class="attribute">border-top</span>: <span class="number">1px</span> solid <span class="variable">$color</span></span><br></pre></td></tr></table></figure>
 </li>
 <li><p>定义全局样式<br>根据不同的dpr进行Y轴缩放<br>base.styl:</p>
-<figure class="highlight stylus"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line">@media (-webkit-min-device-pixel-ratio: <span class="number">1.5</span>),(min-device-pixel-ratio: <span class="number">1.5</span>)</div><div class="line">  .<span class="attribute">border</span>-<span class="number">1px</span></div><div class="line">    &amp;::after</div><div class="line">      -webkit-<span class="attribute">transform</span>: scaleY(<span class="number">0.7</span>)</div><div class="line">      <span class="attribute">transform</span>: scaleY(<span class="number">0.7</span>)</div><div class="line">@media (-webkit-min-device-pixel-ratio: <span class="number">2</span>),(min-device-pxel-ratio: <span class="number">2</span>)</div><div class="line">  .<span class="attribute">border</span>-<span class="number">1px</span></div><div class="line">    &amp;::after</div><div class="line">      -webkit-<span class="attribute">transform</span>: scaleY(<span class="number">0.5</span>)</div><div class="line">      <span class="attribute">transform</span>: scaleY(<span class="number">0.5</span>)</div><div class="line">@media (-webkit-min-device-pixel-ratio: <span class="number">3</span>),(min-device-pxel-ratio: <span class="number">3</span>)</div><div class="line">  .<span class="attribute">border</span>-<span class="number">1px</span></div><div class="line">    &amp;::after</div><div class="line">      -webkit-<span class="attribute">transform</span>: scaleY(<span class="number">0.3</span>)</div><div class="line">      <span class="attribute">transform</span>: scaleY(<span class="number">0.3</span>)</div></pre></td></tr></table></figure>
+<figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">@media (-webkit-min-device-pixel-ratio: <span class="number">1.5</span>),(min-device-pixel-ratio: <span class="number">1.5</span>)</span><br><span class="line">  .<span class="attribute">border</span>-<span class="number">1px</span></span><br><span class="line">    &amp;::after</span><br><span class="line">      -webkit-<span class="attribute">transform</span>: scaleY(<span class="number">0.7</span>)</span><br><span class="line">      <span class="attribute">transform</span>: scaleY(<span class="number">0.7</span>)</span><br><span class="line">@media (-webkit-min-device-pixel-ratio: <span class="number">2</span>),(min-device-pxel-ratio: <span class="number">2</span>)</span><br><span class="line">  .<span class="attribute">border</span>-<span class="number">1px</span></span><br><span class="line">    &amp;::after</span><br><span class="line">      -webkit-<span class="attribute">transform</span>: scaleY(<span class="number">0.5</span>)</span><br><span class="line">      <span class="attribute">transform</span>: scaleY(<span class="number">0.5</span>)</span><br><span class="line">@media (-webkit-min-device-pixel-ratio: <span class="number">3</span>),(min-device-pxel-ratio: <span class="number">3</span>)</span><br><span class="line">  .<span class="attribute">border</span>-<span class="number">1px</span></span><br><span class="line">    &amp;::after</span><br><span class="line">      -webkit-<span class="attribute">transform</span>: scaleY(<span class="number">0.3</span>)</span><br><span class="line">      <span class="attribute">transform</span>: scaleY(<span class="number">0.3</span>)</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>引用样式<br>样式集中到index.styl里：</p>
-<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">@import "./base.styl";</div><div class="line">@import "./icon.styl";</div><div class="line">@import "./mixin.styl";</div></pre></td></tr></table></figure>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">@import "./base.styl";</span><br><span class="line">@import "./icon.styl";</span><br><span class="line">@import "./mixin.styl";</span><br></pre></td></tr></table></figure>
 </li>
 </ol>
-<p>页面元素：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">&lt;div class=&quot;tab border-1px&quot;&gt;</div><div class="line">......</div><div class="line">.tab</div><div class="line">    display: flex</div><div class="line">    width: 100%</div><div class="line">    border1px(rgba(7,17,27,0.1))</div></pre></td></tr></table></figure></p>
+<p>页面元素：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&lt;div class=&quot;tab border-1px&quot;&gt;</span><br><span class="line">......</span><br><span class="line">.tab</span><br><span class="line">    display: flex</span><br><span class="line">    width: 100%</span><br><span class="line">    border1px(rgba(7,17,27,0.1))</span><br></pre></td></tr></table></figure></p>
 <h2 id="文章参考"><a href="#文章参考" class="headerlink" title="文章参考"></a>文章参考</h2><ul>
-<li><a href="http://www.jianshu.com/p/b94803509d01" target="_blank" rel="external">http://www.jianshu.com/p/b94803509d01</a></li>
-<li><a href="http://www.cnblogs.com/xiaohuochai/p/5494624.html" target="_blank" rel="external">http://www.cnblogs.com/xiaohuochai/p/5494624.html</a></li>
-<li><a href="http://www.jianshu.com/p/221bebfae266" target="_blank" rel="external">http://www.jianshu.com/p/221bebfae266</a></li>
+<li><a href="http://www.jianshu.com/p/b94803509d01" target="_blank" rel="noopener">http://www.jianshu.com/p/b94803509d01</a></li>
+<li><a href="http://www.cnblogs.com/xiaohuochai/p/5494624.html" target="_blank" rel="noopener">http://www.cnblogs.com/xiaohuochai/p/5494624.html</a></li>
+<li><a href="http://www.jianshu.com/p/221bebfae266" target="_blank" rel="noopener">http://www.jianshu.com/p/221bebfae266</a></li>
 </ul>
 
       
@@ -585,6 +585,10 @@
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">webpack</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">其他</a>
               </li>
              
@@ -597,15 +601,15 @@
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">小工具</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">Linux</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">正则</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">小工具</a>
               </li>
              
               <li class="article-tag-list-item">

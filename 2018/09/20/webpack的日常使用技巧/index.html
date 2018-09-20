@@ -6,29 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>全方位科学上网 | 我的小空间</title>
+  <title>webpack的日常使用技巧 | 我的小空间</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="翻墙工具之前尝试过用Google cloud搭建ss、使用过我的云梯、蓝灯等，都纷纷挂了。总结下来，还是Shodowsocks最持久。本篇就介绍Shodowsocks的使用姿势吧。涵盖局部翻墙、全局翻墙、个别应用(如Dropbox)翻墙">
-<meta name="keywords" content="其他">
+  <meta name="description" content="神奇的 chunkhash 使用场景打包出来的文件，不加chunkhash或者hash。会有缓存的问题，需要手动的去清缓存，比较麻烦  一般这样写：chunkFilename: &amp;#39;[name].js&amp;#39;,  chunkhash会比较某个文件的改动历史，如果没改动，chunkhash不变。如果改动了，chunkhush会变化。这既保证了有用的缓存，对于改动的文件也立马反应到页面上">
+<meta name="keywords" content="webpack">
 <meta property="og:type" content="article">
-<meta property="og:title" content="全方位科学上网">
-<meta property="og:url" content="http://yoursite.com/2018/04/10/全方位科学上网/index.html">
+<meta property="og:title" content="webpack的日常使用技巧">
+<meta property="og:url" content="http://yoursite.com/2018/09/20/webpack的日常使用技巧/index.html">
 <meta property="og:site_name" content="我的小空间">
-<meta property="og:description" content="翻墙工具之前尝试过用Google cloud搭建ss、使用过我的云梯、蓝灯等，都纷纷挂了。总结下来，还是Shodowsocks最持久。本篇就介绍Shodowsocks的使用姿势吧。涵盖局部翻墙、全局翻墙、个别应用(如Dropbox)翻墙">
+<meta property="og:description" content="神奇的 chunkhash 使用场景打包出来的文件，不加chunkhash或者hash。会有缓存的问题，需要手动的去清缓存，比较麻烦  一般这样写：chunkFilename: &amp;#39;[name].js&amp;#39;,  chunkhash会比较某个文件的改动历史，如果没改动，chunkhash不变。如果改动了，chunkhush会变化。这既保证了有用的缓存，对于改动的文件也立马反应到页面上">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="http://yoursite.com/2018/04/10/全方位科学上网/ss.png">
-<meta property="og:image" content="http://yoursite.com/2018/04/10/全方位科学上网/service.png">
-<meta property="og:image" content="http://yoursite.com/2018/04/10/全方位科学上网/5.png">
-<meta property="og:image" content="http://yoursite.com/2018/04/10/全方位科学上网/falcon.png">
-<meta property="og:image" content="http://yoursite.com/2018/04/10/全方位科学上网/1.png">
-<meta property="og:image" content="http://yoursite.com/2018/04/10/全方位科学上网/2.png">
-<meta property="og:image" content="http://yoursite.com/2018/04/10/全方位科学上网/3.png">
-<meta property="og:image" content="http://yoursite.com/2018/04/10/全方位科学上网/4.png">
-<meta property="og:updated_time" content="2018-04-10T08:08:23.000Z">
+<meta property="og:updated_time" content="2018-09-20T07:17:25.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="全方位科学上网">
-<meta name="twitter:description" content="翻墙工具之前尝试过用Google cloud搭建ss、使用过我的云梯、蓝灯等，都纷纷挂了。总结下来，还是Shodowsocks最持久。本篇就介绍Shodowsocks的使用姿势吧。涵盖局部翻墙、全局翻墙、个别应用(如Dropbox)翻墙">
-<meta name="twitter:image" content="http://yoursite.com/2018/04/10/全方位科学上网/ss.png">
+<meta name="twitter:title" content="webpack的日常使用技巧">
+<meta name="twitter:description" content="神奇的 chunkhash 使用场景打包出来的文件，不加chunkhash或者hash。会有缓存的问题，需要手动的去清缓存，比较麻烦  一般这样写：chunkFilename: &amp;#39;[name].js&amp;#39;,  chunkhash会比较某个文件的改动历史，如果没改动，chunkhash不变。如果改动了，chunkhush会变化。这既保证了有用的缓存，对于改动的文件也立马反应到页面上">
   
     <link rel="alternative" href="/atom.xml" title="我的小空间" type="application/atom+xml">
   
@@ -164,74 +155,60 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-全方位科学上网" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-webpack的日常使用技巧" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      全方位科学上网
+      webpack的日常使用技巧
     </h1>
   
 
         
-        <a href="/2018/04/10/全方位科学上网/" class="archive-article-date">
-  	<time datetime="2018-04-10T07:33:15.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-04-10</time>
+        <a href="/2018/09/20/webpack的日常使用技巧/" class="archive-article-date">
+  	<time datetime="2018-09-20T07:09:44.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-09-20</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="翻墙工具"><a href="#翻墙工具" class="headerlink" title="翻墙工具"></a>翻墙工具</h2><p>之前尝试过用<code>Google cloud搭建ss</code>、使用过<code>我的云梯</code>、<code>蓝灯</code>等，都纷纷挂了。总结下来，还是<code>Shodowsocks</code>最持久。<br>本篇就介绍Shodowsocks的使用姿势吧。涵盖局部翻墙、全局翻墙、个别应用(如Dropbox)翻墙</p>
+        <h2 id="神奇的-chunkhash"><a href="#神奇的-chunkhash" class="headerlink" title="神奇的 chunkhash"></a>神奇的 chunkhash</h2><ul>
+<li>使用场景<br>打包出来的文件，不加chunkhash或者hash。会有缓存的问题，需要手动的去清缓存，比较麻烦</li>
+</ul>
+<p>一般这样写：<br><code>chunkFilename: &#39;[name].js&#39;,</code></p>
+<ul>
+<li>chunkhash<br>会比较某个文件的改动历史，如果没改动，chunkhash不变。如果改动了，chunkhush会变化。这既保证了有用的缓存，对于改动的文件也立马反应到页面上</li>
+</ul>
 <a id="more"></a>
-<h2 id="Shodowsocks的安装使用"><a href="#Shodowsocks的安装使用" class="headerlink" title="Shodowsocks的安装使用"></a>Shodowsocks的安装使用</h2><p><a href="https://github.com/shadowsocks/ShadowsocksX-NG" target="_blank" rel="noopener">在github上下载安装包</a>。有时候github需要翻墙才能上，上不了的话就需要求助好友发包了……</p>
+<p>使用：<br><code>chunkFilename: &#39;[name].[chunkhash:8].js&#39;,</code></p>
 <ul>
-<li><p>安装完成后，ss的界面如下</p>
-<div style="width: 500px"><br>  <img src="/2018/04/10/全方位科学上网/ss.png"><br></div>
-</li>
-<li><p><code>Proxy Auto Configure Mode</code>：代理自动配置模式，最经常用的模式。<br>它根据域名自动选择是否翻墙。如国内网站baidu.com，它就走国内的通道。如国外网站google.com，它就走国外的通道。<br>这种模式的好处是，节省翻墙流量</p>
-</li>
-<li><p><code>Global Mode</code>：全局翻墙模式。顾名思义，不论国内国外网站，统一走国外的通道。<br>这种模式弊端非常明显，万一不小心在刷视频，流量蹭蹭蹭就没了。<br>注意一点的是，虽晚网站都翻墙了，但电脑里的应用还是走国内网络的</p>
-</li>
-<li><p><code>Server Preference</code>：服务偏好设置。可以找一些免费的渠道，如<a href="https://free-ss.site/" target="_blank" rel="noopener">免费上网账号</a>。或者到<a href="https://portal.shadowsocks.to" target="_blank" rel="noopener">shadowsocks</a>自己购买服务<br>新手可以尝试下买starter套餐，一年97元左右，也不贵。一个月有50GB的流量，手机和电脑科学上网也够用了。<br>手机端需要另外下载第三方的客户端，推荐<code>Shadowrocket</code>，用了老长一段时间了。</p>
-<div style="width: 700px"><br>  <img src="/2018/04/10/全方位科学上网/service.png"><br></div>
-</li>
-<li><p>购买完服务后，就把提供的ip、port等等的信息填写好就可以了。或者直接扫描二维码</p>
-<div style="width: 500px"><br>  <img src="/2018/04/10/全方位科学上网/5.png"><br></div>
-
-</li>
+<li>hash<br>类似于时间戳，无论文件是否有改动，hash都会变化</li>
 </ul>
-<p>上面流程走完后，基本可以翻墙了。</p>
-<h2 id="特别注意的点"><a href="#特别注意的点" class="headerlink" title="特别注意的点"></a>特别注意的点</h2><p>打开目录，<code>cd .ShadowsocksX-NG/gfwlist.js</code><br>文件中第一句说的是：<br><code>var proxy = &quot;SOCKS5 127.0.0.1:1086; SOCKS 127.0.0.1:1086; DIRECT;&quot;;</code><br>ShadowsocksX-NG是socks5的一种。<br>在本地ShadowsocksX-NG客户端开启后，会打开本机的1086端口，这个端口就提供socks5服务。<br>注意的是，当ShadowsocksX-NG有更新时，注意查看下端口有没有变化。我前段时间的端口是1080，现在就换成了1086。端口更改了，相应的代理服务的端口也要改下，否则翻墙就不起效了</p>
-<h2 id="局部翻墙"><a href="#局部翻墙" class="headerlink" title="局部翻墙"></a>局部翻墙</h2><p>由于开发习惯，本地启的一些服务只能走内网的。因此用的比较多的是局部翻墙。<br>我一般会开两个chrome账户，一个走国内的网络，一个走国外的网络。<br>在此推荐一个chrome的插件：<code>Falcon Proxy</code>。<br>安装好之后增加一个配置如下：<br>  <div style="width: 300px"><br>    <img src="/2018/04/10/全方位科学上网/falcon.png"><br>  </div><br>增加一个本地的socks5代理，端口是<code>1086</code>。<br>所以chrome插件falcon的配置项，就代理了ShadowsocksX-NG提供的翻墙服务</p>
-<h2 id="全局翻墙"><a href="#全局翻墙" class="headerlink" title="全局翻墙"></a>全局翻墙</h2><p>这里的全局不单单是开启了<code>Global Mode</code>。<br>由于开发需要，时常需要安装依赖，走国内镜像的话，有可能安装不全，容易报错。<br>有时候<code>npm install</code>老半天也没反应时，我会选择在<code>terminal</code>实现翻墙，安装依赖刷刷刷就可以完成了。<br>在此推荐一个代理类的App：<code>Proxifier</code></p>
-<p>安装后设置如下：</p>
-<ol>
-<li><p>在Proxies菜单下增加一个本地的socks5代理，端口是<code>1086</code>，可以代理ShadowsocksX-NG提供的代理服务</p>
-<div style="width: 450px"><br> <img src="/2018/04/10/全方位科学上网/1.png"><br></div>
-</li>
-<li><p>Rules规则设置如下<br><div style="width: 450px"></div></p>
- <img src="/2018/04/10/全方位科学上网/2.png">
-<p></p>
+<p>使用：<br><code>chunkFilename: &#39;[name].[hash].js&#39;,</code></p>
 <ul>
-<li>第一条记录的意思是，ShadowsocksX-NG直连不使用代理，这条记录是为了第三条记录设置时，不走死循环(毕竟没有自己代理自己的)</li>
-<li>第二条记录的意思是，所有本地开启的服务如localhost、127.0.0.1等等，直连，不走代理</li>
-<li>第三条记录的意思是，排除了直连的，所有应用使用1086端口提供的翻墙代理服务</li>
+<li>参考<ul>
+<li>官网：<a href="https://webpack.js.org/configuration/" target="_blank" rel="noopener">https://webpack.js.org/configuration/</a></li>
+<li>博客：<a href="https://zhuanlan.zhihu.com/p/23595975" target="_blank" rel="noopener">https://zhuanlan.zhihu.com/p/23595975</a></li>
 </ul>
 </li>
-</ol>
-<p>可以在terminal翻墙啦</p>
-<h2 id="个别应用翻墙"><a href="#个别应用翻墙" class="headerlink" title="个别应用翻墙"></a>个别应用翻墙</h2><p>如果terminal不需要翻墙，我就不会选择全局翻墙了，主要是为了省流量。但有一些国外的应用，如Dropbox，文件同步时需要给这给应用“翻墙”。怎么做呢？在应用内设置代理</p>
-<ul>
-<li><p>打开应用偏好设置</p>
-<div style="width: 350px"><br>  <img src="/2018/04/10/全方位科学上网/3.png"><br></div>
-</li>
-<li><p>在Network下选择代理设置，使应用内的网络走ShadowsocksX-NG的代理</p>
-<div style="width: 400px"><br>  <img src="/2018/04/10/全方位科学上网/4.png"><br></div>
-</li>
 </ul>
+<h2 id="plugins"><a href="#plugins" class="headerlink" title="plugins"></a>plugins</h2><ul>
+<li>CommonsChunkPlugin</li>
+</ul>
+<p>在多页应用里，经常会引进一些共用的部分，例如头部、侧边栏等。这时候打包时，就需要从多个模块中提取共用的模块了。可以使用 webpack 的插件 <code>CommonsChunkPlugin</code>。</p>
+<p>配置文档是：<a href="https://webpack.js.org/plugins/commons-chunk-plugin/#passing-the-minchunks-property-a-function" target="_blank" rel="noopener">CommonsChunkPlugin</a></p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">plugins: [</span><br><span class="line">  <span class="comment">// 从多个模块中提取共用的模块到common.js</span></span><br><span class="line">  <span class="keyword">new</span> webpack.optimize.CommonsChunkPlugin(&#123;</span><br><span class="line">    name: <span class="string">'common'</span>,</span><br><span class="line">    filename: <span class="string">'common.js'</span>,</span><br><span class="line">    minChunks: <span class="number">2</span>,</span><br><span class="line">  &#125;),</span><br><span class="line">],</span><br></pre></td></tr></table></figure>
+<p>相应的配置项解析：<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  name: string,</span><br><span class="line">  names: string[],</span><br><span class="line">  <span class="comment">// 这是 common chunk 的名称。已经存在的 chunk 可以通过传入一个已存在的 chunk 名称而被选择。</span></span><br><span class="line">  <span class="comment">// 如果一个字符串数组被传入，这相当于插件针对每个 chunk 名被多次调用</span></span><br><span class="line">  <span class="comment">// 如果该选项被忽略，同时 `options.async` 或者 `options.children` 被设置，所有的 chunk 都会被使用，否则 `options.filename` 会用于作为 chunk 名。</span></span><br><span class="line"></span><br><span class="line">  filename: string,</span><br><span class="line">  <span class="comment">// common chunk 的文件名模板。可以包含与 `output.filename` 相同的占位符。</span></span><br><span class="line">  <span class="comment">// 如果被忽略，原本的文件名不会被修改(通常是 `output.filename` 或者 `output.chunkFilename`)</span></span><br><span class="line"></span><br><span class="line">  minChunks: number|<span class="literal">Infinity</span>|<span class="function"><span class="keyword">function</span>(<span class="params">module, count</span>) -&gt; <span class="title">boolean</span>,</span></span><br><span class="line"><span class="function">  // 在传入  公共<span class="title">chunk</span>(<span class="params">commons chunk</span>) 之前所需要包含的最少数量的 <span class="title">chunks</span> 。</span></span><br><span class="line"><span class="function">  // 数量必须大于等于2，或者少于等于 <span class="title">chunks</span>的数量</span></span><br><span class="line"><span class="function">  // 传入 `<span class="title">Infinity</span>` 会马上生成 公共<span class="title">chunk</span>，但里面没有模块。</span></span><br><span class="line"><span class="function">  // 你可以传入一个 `<span class="title">function</span>` ，以添加定制的逻辑（默认是 <span class="title">chunk</span> 的数量）</span></span><br><span class="line"><span class="function"></span></span><br><span class="line">  chunks: string[],</span><br><span class="line">  <span class="comment">// 通过 chunk name 去选择 chunks 的来源。chunk 必须是  公共chunk 的子模块。</span></span><br><span class="line">  <span class="comment">// 如果被忽略，所有的，所有的 入口chunk (entry chunk) 都会被选择。</span></span><br><span class="line"></span><br><span class="line">  children: boolean,</span><br><span class="line">  <span class="comment">// 如果设置为 `true`，所有  公共chunk 的子模块都会被选择</span></span><br><span class="line"></span><br><span class="line">  <span class="keyword">async</span>: boolean|string,</span><br><span class="line">  <span class="comment">// 如果设置为 `true`，一个异步的  公共chunk 会作为 `options.name` 的子模块，和 `options.chunks` 的兄弟模块被创建。</span></span><br><span class="line">  <span class="comment">// 它会与 `options.chunks` 并行被加载。可以通过提供想要的字符串，而不是 `true` 来对输出的文件进行更换名称。</span></span><br><span class="line"></span><br><span class="line">  minSize: number,</span><br><span class="line">  <span class="comment">// 在 公共chunk 被创建立之前，所有 公共模块 (common module) 的最少大小。</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<ul>
+<li>ExtractTextPlugin</li>
+</ul>
+<p>将模块里共用的模块抽取出来后，需要进一步地分离 js 和 css 代码。所用到的插件是 <code>ExtractTextPlugin</code></p>
+<p>配置文档是：<a href="https://webpack.js.org/plugins/extract-text-webpack-plugin/#options" target="_blank" rel="noopener">ExtractTextPlugin</a></p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 分离 css 和 js 文件</span></span><br><span class="line"><span class="keyword">new</span> ExtractTextPlugin(&#123;</span><br><span class="line">  filename: <span class="string">'[name].css'</span>,</span><br><span class="line">  allChunks: <span class="literal">true</span>,</span><br><span class="line">&#125;),</span><br></pre></td></tr></table></figure>
+<p>需要注意的一点是，当使用 <code>CommonsChunkPlugin</code> 并且在公共 <code>chunk</code> 中有提取的 <code>chunk</code>（来自<code>ExtractTextPlugin.extract</code>）时，<code>allChunks</code> 必须设置为 <code>true</code></p>
 
       
 
@@ -245,7 +222,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">其他</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">webpack</a>
         		</li>
       		
 		</ul>
@@ -301,7 +278,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="http://s.jiathis.com/qrcode.php?url=http://yoursite.com/2018/04/10/全方位科学上网/" alt="微信分享二维码">
+      <img src="http://s.jiathis.com/qrcode.php?url=http://yoursite.com/2018/09/20/webpack的日常使用技巧/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -315,18 +292,9 @@
   
 <nav id="article-nav">
   
-    <a href="/2018/05/30/创建一个range-input控制的环形图/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          创建一个range-input控制的环形图
-        
-      </div>
-    </a>
   
-  
-    <a href="/2018/03/18/深入理解JS的连等赋值/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">深入理解JS的连等赋值</div>
+    <a href="/2018/05/30/水滴扩散动画的实现/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">水滴扩散动画的实现</div>
       <i class="icon-circle-right"></i>
     </a>
   
@@ -353,7 +321,7 @@
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#翻墙工具"><span class="toc-number">1.</span> <span class="toc-text">翻墙工具</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Shodowsocks的安装使用"><span class="toc-number">2.</span> <span class="toc-text">Shodowsocks的安装使用</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#特别注意的点"><span class="toc-number">3.</span> <span class="toc-text">特别注意的点</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#局部翻墙"><span class="toc-number">4.</span> <span class="toc-text">局部翻墙</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#全局翻墙"><span class="toc-number">5.</span> <span class="toc-text">全局翻墙</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#个别应用翻墙"><span class="toc-number">6.</span> <span class="toc-text">个别应用翻墙</span></a></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#神奇的-chunkhash"><span class="toc-number">1.</span> <span class="toc-text">神奇的 chunkhash</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#plugins"><span class="toc-number">2.</span> <span class="toc-text">plugins</span></a></li></ol>
                     </div>
                 </span>
             </div>

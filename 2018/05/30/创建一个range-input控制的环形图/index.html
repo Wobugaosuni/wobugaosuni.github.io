@@ -183,42 +183,42 @@
     <div class="article-entry" itemprop="articleBody">
       
         <h2 id="使用圆锥渐变和css变量创建一个range-input控制的环形图"><a href="#使用圆锥渐变和css变量创建一个range-input控制的环形图" class="headerlink" title="使用圆锥渐变和css变量创建一个range input控制的环形图"></a>使用圆锥渐变和css变量创建一个range input控制的环形图</h2><ul>
-<li>项目演示<br>演示地址：<a href="https://wobugaosuni.github.io/rangeInput/" target="_blank" rel="external">https://wobugaosuni.github.io/rangeInput/</a><br>github源码：<a href="https://github.com/Wobugaosuni/rangeInput.git" target="_blank" rel="external">https://github.com/Wobugaosuni/rangeInput.git</a><div style="width: 320px"><br>  <img src="/2018/05/30/创建一个range-input控制的环形图/7.gif" alt="7.gif" title=""><br></div>
+<li>项目演示<br>演示地址：<a href="https://wobugaosuni.github.io/rangeInput/" target="_blank" rel="noopener">https://wobugaosuni.github.io/rangeInput/</a><br>github源码：<a href="https://github.com/Wobugaosuni/rangeInput.git" target="_blank" rel="noopener">https://github.com/Wobugaosuni/rangeInput.git</a><div style="width: 320px"><br>  <img src="/2018/05/30/创建一个range-input控制的环形图/7.gif"><br></div>
 
 </li>
 </ul>
 <a id="more"></a>
 <h2 id="关于conic-gradient"><a href="#关于conic-gradient" class="headerlink" title="关于conic-gradient()"></a>关于<code>conic-gradient()</code></h2><ul>
 <li><p>圆锥渐变，类似以下的</p>
-<div style="width: 200px"><br>  <img src="/2018/05/30/创建一个range-input控制的环形图/1.png" alt="1.png" title=""><br></div>
+<div style="width: 200px"><br>  <img src="/2018/05/30/创建一个range-input控制的环形图/1.png"><br></div>
 </li>
 <li><p>浏览器支持情况</p>
-<div style="width: 750px"><br>  <img src="/2018/05/30/创建一个range-input控制的环形图/2.png" alt="2.png" title=""><br></div>
+<div style="width: 750px"><br>  <img src="/2018/05/30/创建一个range-input控制的环形图/2.png"><br></div>
 
-<p>还处在一个实验中的功能，如果想要使用，需要开启在<a href="chrome://flags/" target="_blank" rel="external">Chrome实验功能选项</a>：</p>
+<p>还处在一个实验中的功能，如果想要使用，需要开启在<a href="chrome://flags/" target="_blank" rel="noopener">Chrome实验功能选项</a>：</p>
 <div style="width: 500px"><br>  <br></div>
 
 </li>
 </ul>
 <p>虽然圆锥渐变还处在实验中的功能，但不妨碍我们学习怎么去运用它，从而触及旁通。</p>
 <h2 id="梳理1-圆锥中间镂空的实现"><a href="#梳理1-圆锥中间镂空的实现" class="headerlink" title="梳理1-圆锥中间镂空的实现"></a>梳理1-圆锥中间镂空的实现</h2><p>如图所示，要实现的是一个圆环，怎么在中间设置一个遮罩层呢？</p>
-<div style="width: 250px"><br>  <img src="/2018/05/30/创建一个range-input控制的环形图/4.png" alt="4.png" title=""><br>  =&gt;<br>  <img src="/2018/05/30/创建一个range-input控制的环形图/5.png" alt="5.png" title=""><br></div>
+<div style="width: 250px"><br>  <img src="/2018/05/30/创建一个range-input控制的环形图/4.png"><br>  =&gt;<br>  <img src="/2018/05/30/创建一个range-input控制的环形图/5.png"><br></div>
 
 <ul>
 <li><p>方法一，在 conic-gradient() 上再设置一层 background-image 进行遮罩，此处用 radial-gradient() 就行了<br>设置<code>transparent 39.5%</code>是为了模糊锯齿</p>
-<figure class="highlight stylus"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="attribute">background-image</span> radial-gradient(<span class="number">#3d3d4a</span> <span class="number">39%</span>, transparent <span class="number">39.5%</span>), conic-gradient(<span class="number">#e64c65</span> calc(var(--val)*<span class="number">1%</span>), <span class="number">#41a8ab</span> <span class="number">0%</span>)</div></pre></td></tr></table></figure>
+<figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">background-image</span> radial-gradient(<span class="number">#3d3d4a</span> <span class="number">39%</span>, transparent <span class="number">39.5%</span>), conic-gradient(<span class="number">#e64c65</span> calc(var(--val)*<span class="number">1%</span>), <span class="number">#41a8ab</span> <span class="number">0%</span>)</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>方法二，使用 CSS3 的新属性 mask，隐藏元素的部分区域。</p>
-<figure class="highlight styl"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">-webkit-<span class="attribute">mask</span>: radial-gradient(transparent <span class="number">39.5%</span>, <span class="number">#3d3d4a</span> <span class="number">39%</span>);</div></pre></td></tr></table></figure>
+<figure class="highlight styl"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">-webkit-<span class="attribute">mask</span>: radial-gradient(transparent <span class="number">39.5%</span>, <span class="number">#3d3d4a</span> <span class="number">39%</span>);</span><br></pre></td></tr></table></figure>
 </li>
 </ul>
 <p>和方法一相比，mask可以使用图片遮罩元素的部分区域，扩展性高些。但IE和Opera都不支持mask属性</p>
 <h2 id="梳理2-伪元素的使用技巧"><a href="#梳理2-伪元素的使用技巧" class="headerlink" title="梳理2-伪元素的使用技巧"></a>梳理2-伪元素的使用技巧</h2><p>如demo，数字后面 % 的添加有各种方法，可以使用js添加。也可以使用伪元素添加，这在日常开发中是没有想到的</p>
-  <figure class="highlight styl"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">&amp;:after</div><div class="line">  <span class="attribute">content</span> <span class="string">'%'</span></div></pre></td></tr></table></figure>
+  <figure class="highlight styl"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&amp;:after</span><br><span class="line">  <span class="attribute">content</span> <span class="string">'%'</span></span><br></pre></td></tr></table></figure>
 <h2 id="梳理3-CSS属性-pointer-events"><a href="#梳理3-CSS属性-pointer-events" class="headerlink" title="梳理3-CSS属性 pointer-events"></a>梳理3-CSS属性 pointer-events</h2><p>把元素设置为 <code>pointer-events none</code> ，除了指示该元素不是鼠标事件的目标之外，值none表示鼠标事件“穿透”该元素并且指定该元素“下面”的任何东西。</p>
 <p>对于作为遮罩作用的元素，设置此属性可以避免覆盖了“下面”元素的事件，非常实用</p>
-<p>参考：<a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/pointer-events" target="_blank" rel="external">pointer-events</a></p>
-<h2 id="梳理4-判断浏览器是否支持某种CSS属性"><a href="#梳理4-判断浏览器是否支持某种CSS属性" class="headerlink" title="梳理4-判断浏览器是否支持某种CSS属性"></a>梳理4-判断浏览器是否支持某种CSS属性</h2><p>例如要判断浏览器是否支持CSS的<code>conic-gradient</code>属性。可以使用<code>getComputedStyle()</code>：<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">if</span> (getComputedStyle(domElement).backgroundImage !== <span class="string">'none) &#123;</span></div><div class="line"><span class="string">  // 支持属性，相应的代码逻辑</span></div><div class="line"><span class="string">&#125; else &#123;</span></div><div class="line"><span class="string">  // 不支持属性，相应的代码逻辑</span></div><div class="line"><span class="string">&#125;</span></div></pre></td></tr></table></figure></p>
+<p>参考：<a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/pointer-events" target="_blank" rel="noopener">pointer-events</a></p>
+<h2 id="梳理4-判断浏览器是否支持某种CSS属性"><a href="#梳理4-判断浏览器是否支持某种CSS属性" class="headerlink" title="梳理4-判断浏览器是否支持某种CSS属性"></a>梳理4-判断浏览器是否支持某种CSS属性</h2><p>例如要判断浏览器是否支持CSS的<code>conic-gradient</code>属性。可以使用<code>getComputedStyle()</code>：<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> (getComputedStyle(domElement).backgroundImage !== <span class="string">'none) &#123;</span></span><br><span class="line"><span class="string">  // 支持属性，相应的代码逻辑</span></span><br><span class="line"><span class="string">&#125; else &#123;</span></span><br><span class="line"><span class="string">  // 不支持属性，相应的代码逻辑</span></span><br><span class="line"><span class="string">&#125;</span></span><br></pre></td></tr></table></figure></p>
 <p><code>getComputedStyle()</code>:</p>
 <ul>
 <li>可以获取当前元素所有最终使用的CSS属性值</li>
@@ -234,24 +234,24 @@
 <li><code>getComputedStyle()</code>是只读，<code>style</code>是可读可写</li>
 <li><code>getComputedStyle()</code>获取的是最终应用在元素上的所有CSS属性对象（即使没有CSS代码，也会把默认的祖宗八代都显示出来）；而<code>element.style</code>只能获取元素style属性中的CSS样式</li>
 </ul>
-<p>Demo: <a href="https://jsbin.com/mabitumeja/edit?html,js,output" target="_blank" rel="external">https://jsbin.com/mabitumeja/edit?html,js,output</a><br><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"styleTest"</span> <span class="attr">class</span>=<span class="string">"style-test"</span> <span class="attr">style</span>=<span class="string">"width: 200px; height: 200px"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div></pre></td></tr></table></figure></p>
-<figure class="highlight styl"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">.style-test</div><div class="line">  <span class="attribute">background</span> pink</div></pre></td></tr></table></figure>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">  <span class="built_in">window</span>.onload=<span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">  <span class="keyword">const</span> styleTest = <span class="built_in">document</span>.getElementById(<span class="string">'styleTest'</span>)</div><div class="line"></div><div class="line">  <span class="built_in">console</span>.log(<span class="string">'getComputedStyle:'</span>, getComputedStyle(styleTest))</div><div class="line">  <span class="built_in">console</span>.log(<span class="string">'style:'</span>, styleTest.style)</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>Demo: <a href="https://jsbin.com/mabitumeja/edit?html,js,output" target="_blank" rel="noopener">https://jsbin.com/mabitumeja/edit?html,js,output</a><br><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"styleTest"</span> <span class="attr">class</span>=<span class="string">"style-test"</span> <span class="attr">style</span>=<span class="string">"width: 200px; height: 200px"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
+<figure class="highlight styl"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">.style-test</span><br><span class="line">  <span class="attribute">background</span> pink</span><br></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">  <span class="built_in">window</span>.onload=<span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="keyword">const</span> styleTest = <span class="built_in">document</span>.getElementById(<span class="string">'styleTest'</span>)</span><br><span class="line"></span><br><span class="line">  <span class="built_in">console</span>.log(<span class="string">'getComputedStyle:'</span>, getComputedStyle(styleTest))</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="string">'style:'</span>, styleTest.style)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>output:</p>
-<div style="width: 700px"><br>  <img src="/2018/05/30/创建一个range-input控制的环形图/6.png" alt="6.png" title=""><br></div>
+<div style="width: 700px"><br>  <img src="/2018/05/30/创建一个range-input控制的环形图/6.png"><br></div>
 
 <h2 id="梳理5-js更改伪元素的样式"><a href="#梳理5-js更改伪元素的样式" class="headerlink" title="梳理5-js更改伪元素的样式"></a>梳理5-js更改伪元素的样式</h2><p>在网页的 <code>document</code> 里有个属性叫做 <code>styleSheet</code>，这个属性会将网页中所有用到的样式列出</p>
 <p>js操作Dom元素并不包括伪元素。如果想通过js修改伪元素的样式。可以使用<code>addRule()</code>的方法</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">document</span>.styleSheets[<span class="number">0</span>].addRule(<span class="string">'output:before'</span>,<span class="string">'transform:'</span> + <span class="string">'translate(0,'</span> + rangeValue / <span class="number">-100</span> * (trackWidth - thumbDiameter) + <span class="string">'px)'</span>)</div></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">document</span>.styleSheets[<span class="number">0</span>].addRule(<span class="string">'output:before'</span>,<span class="string">'transform:'</span> + <span class="string">'translate(0,'</span> + rangeValue / <span class="number">-100</span> * (trackWidth - thumbDiameter) + <span class="string">'px)'</span>)</span><br></pre></td></tr></table></figure>
 <p>两个参数都是字符串。<br>第一个参数是伪元素，第二个参数是相应的样式</p>
 <h2 id="文档参考"><a href="#文档参考" class="headerlink" title="文档参考"></a>文档参考</h2><ul>
-<li><p><a href="http://www.zhangxinxu.com/wordpress/2012/05/getcomputedstyle-js-getpropertyvalue-currentstyle/" target="_blank" rel="external">张鑫旭，获取元素CSS值之getComputedStyle方法熟悉</a></p>
+<li><p><a href="http://www.zhangxinxu.com/wordpress/2012/05/getcomputedstyle-js-getpropertyvalue-currentstyle/" target="_blank" rel="noopener">张鑫旭，获取元素CSS值之getComputedStyle方法熟悉</a></p>
 </li>
-<li><p><a href="http://jdc.jd.com/archives/212063" target="_blank" rel="external">http://jdc.jd.com/archives/212063</a></p>
+<li><p><a href="http://jdc.jd.com/archives/212063" target="_blank" rel="noopener">http://jdc.jd.com/archives/212063</a></p>
 </li>
-<li><p><a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/radial-gradient" target="_blank" rel="external">原点辐射渐变radial-gradient</a></p>
+<li><p><a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/radial-gradient" target="_blank" rel="noopener">原点辐射渐变radial-gradient</a></p>
 </li>
-<li><p><a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/pointer-events" target="_blank" rel="external">pointer-events</a></p>
+<li><p><a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/pointer-events" target="_blank" rel="noopener">pointer-events</a></p>
 </li>
 </ul>
 
@@ -500,6 +500,10 @@
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">webpack</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">其他</a>
               </li>
              
@@ -512,15 +516,15 @@
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">小工具</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">Linux</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">正则</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">小工具</a>
               </li>
              
               <li class="article-tag-list-item">
