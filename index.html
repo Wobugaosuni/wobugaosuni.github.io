@@ -155,6 +155,93 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-我的Demo集" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/10/17/我的Demo集/">我的Demo集</a>
+    </h1>
+  
+
+        
+        <a href="/2018/10/17/我的Demo集/" class="archive-article-date">
+  	<time datetime="2018-10-17T07:01:14.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-10-17</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>平时工作中遇到的问题总结、学习笔记等，都会记录到博客里的，欢迎阅读和指教啦：annhuang.cn</p>
+<p>github地址：<a href="https://github.com/Wobugaosuni" target="_blank" rel="noopener">https://github.com/Wobugaosuni</a></p>
+<p>嗯，这里汇总一些我平时研究总结做的小demo</p>
+<ul>
+<li><p><a href="https://github.com/Wobugaosuni/sellByReact" target="_blank" rel="noopener">仿饿了么H5页面</a></p>
+</li>
+<li><p><a href="https://github.com/Wobugaosuni/react-mobx-app-base" target="_blank" rel="noopener">react + mobx脚手架源码</a></p>
+</li>
+<li><p><a href="https://github.com/Wobugaosuni/qiu-react-cli" target="_blank" rel="noopener">react + redux脚手架源码</a></p>
+</li>
+<li><p><a href="https://github.com/Wobugaosuni/node-practice" target="_blank" rel="noopener">node.js学习笔记和demo</a></p>
+</li>
+<li><p><a href="http://annhuang.cn/d3Chart/" target="_blank" rel="noopener">d3.js制作图表</a></p>
+</li>
+<li><p><a href="http://annhuang.cn/rangeInput/" target="_blank" rel="noopener">使用圆锥渐变和css变量创建一个range input控制的环形图</a></p>
+</li>
+<li><p><a href="http://annhuang.cn/galleryByReact/" target="_blank" rel="noopener">图片画廊</a><br>动画翻转、随机位处理等</p>
+</li>
+<li><p><a href="http://annhuang.cn/recursive-directory-tree/" target="_blank" rel="noopener">无限递归目录树</a></p>
+</li>
+<li><p><a href="https://github.com/Wobugaosuni/WebApp-Reader" target="_blank" rel="noopener">H5阅读器</a></p>
+</li>
+<li><p><a href="https://github.com/Wobugaosuni/ResponsiveWEb" target="_blank" rel="noopener">理财宝，响应式网站</a><br>适配手机端、iPad、Pc端</p>
+</li>
+</ul>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2018/10/17/我的Demo集/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-webpack的日常使用技巧" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -880,82 +967,6 @@
 
 
   
-    <article id="post-正则的应用" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/11/21/正则的应用/">正则的应用</a>
-    </h1>
-  
-
-        
-        <a href="/2017/11/21/正则的应用/" class="archive-article-date">
-  	<time datetime="2017-11-21T03:14:08.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-11-21</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="数字格式化问题，1234567890-–-gt-1-234-567-890"><a href="#数字格式化问题，1234567890-–-gt-1-234-567-890" class="headerlink" title="数字格式化问题，1234567890 –&gt; 1,234,567,890"></a>数字格式化问题，1234567890 –&gt; 1,234,567,890</h2>  <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> test1 = <span class="string">'123456789012'</span></span><br><span class="line"><span class="keyword">let</span> format = test1.replace(<span class="regexp">/\B(?=(\d&#123;3&#125;)+(?!\d))/g</span>, <span class="string">','</span>)</span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(format) <span class="comment">// 1,234,567,890</span></span><br></pre></td></tr></table></figure>
-        
-          <a class="article-more-a" href="/2017/11/21/正则的应用/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">正则</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/11/21/正则的应用/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
   
     <nav id="page-nav">
       <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/">Next &raquo;</a>
@@ -1078,15 +1089,15 @@
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">小工具</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">Linux</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">正则</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">小工具</a>
               </li>
              
               <li class="article-tag-list-item">
