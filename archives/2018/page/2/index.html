@@ -6,20 +6,18 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>关于class的一些总结 | 我的小空间</title>
+  <title>Archives: 2018 | 我的小空间</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="类和模块的内部，默认就是严格模式  类和构造函数的区别 类原型对象上的方法是不可枚举的，包括constructor构造方法 12345678910class Point &amp;#123;  constructor(x, y) &amp;#123;&amp;#125;  toString() &amp;#123;&amp;#125;  toNumber()&amp;#123;&amp;#125;&amp;#125;Object.keys(Point.pro">
-<meta name="keywords" content="JS">
-<meta property="og:type" content="article">
-<meta property="og:title" content="关于class的一些总结">
-<meta property="og:url" content="http://yoursite.com/2018/03/05/关于class的一些总结/index.html">
+  <meta name="description" content="前端工程师">
+<meta property="og:type" content="website">
+<meta property="og:title" content="我的小空间">
+<meta property="og:url" content="http://yoursite.com/archives/2018/page/2/index.html">
 <meta property="og:site_name" content="我的小空间">
-<meta property="og:description" content="类和模块的内部，默认就是严格模式  类和构造函数的区别 类原型对象上的方法是不可枚举的，包括constructor构造方法 12345678910class Point &amp;#123;  constructor(x, y) &amp;#123;&amp;#125;  toString() &amp;#123;&amp;#125;  toNumber()&amp;#123;&amp;#125;&amp;#125;Object.keys(Point.pro">
+<meta property="og:description" content="前端工程师">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-03-18T08:46:36.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="关于class的一些总结">
-<meta name="twitter:description" content="类和模块的内部，默认就是严格模式  类和构造函数的区别 类原型对象上的方法是不可枚举的，包括constructor构造方法 12345678910class Point &amp;#123;  constructor(x, y) &amp;#123;&amp;#125;  toString() &amp;#123;&amp;#125;  toNumber()&amp;#123;&amp;#125;&amp;#125;Object.keys(Point.pro">
+<meta name="twitter:title" content="我的小空间">
+<meta name="twitter:description" content="前端工程师">
   
     <link rel="alternative" href="/atom.xml" title="我的小空间" type="application/atom+xml">
   
@@ -155,90 +153,36 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-关于class的一些总结" class="article article-type-post " itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
+            
   
-    <h1 class="article-title" itemprop="name">
-      关于class的一些总结
+  
+    
+    
+      
+      
+      <section class="archives-wrap">
+        <div class="archive-year-wrap">
+          <a href="/archives/2018" class="archive-year">2018</a>
+        </div>
+        <div class="archives">
+    
+    <article class="archive-article archive-type-post">
+  <div class="archive-article-inner">
+    <header class="archive-article-header">
+      	<div class="article-meta">
+	      	<a href="/2018/02/01/javaScript实现大数相加/" class="archive-article-date">
+  	<time datetime="2018-02-01T12:54:49.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-02-01</time>
+</a>
+        </div>
+    	 
+  
+    <h1 itemprop="name">
+      <a class="archive-article-title" href="/2018/02/01/javaScript实现大数相加/">javaScript实现大数相加</a>
     </h1>
   
 
-        
-        <a href="/2018/03/05/关于class的一些总结/" class="archive-article-date">
-  	<time datetime="2018-03-05T06:52:14.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-03-05</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <ul>
-<li>类和模块的内部，默认就是严格模式</li>
-</ul>
-<h2 id="类和构造函数的区别"><a href="#类和构造函数的区别" class="headerlink" title="类和构造函数的区别"></a>类和构造函数的区别</h2><ul>
-<li><p><strong>类原型对象上的方法是不可枚举的</strong>，包括constructor构造方法</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Point</span> </span>&#123;</span><br><span class="line">  <span class="keyword">constructor</span>(x, y) &#123;&#125;</span><br><span class="line"></span><br><span class="line">  toString() &#123;&#125;</span><br><span class="line"></span><br><span class="line">  toNumber()&#123;&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="built_in">Object</span>.keys(Point.prototype);  <span class="comment">// []</span></span><br><span class="line"><span class="built_in">Object</span>.getOwnPropertyNames(Point.prototype);  <span class="comment">// ["constructor", "toString", "toNumber"]</span></span><br></pre></td></tr></table></figure>
-<p>上例所示，通过<code>Object.keys()</code>方法返回给定对象的可枚举属性组成的数组为空，通过<code>Object.getOwnPropertyNames()</code>方法返回了包括不可枚举属性组成的数组，其中三个元素都是不可枚举的</p>
-</li>
-</ul>
-<a id="more"></a>
-<ul>
-<li><strong>构造函数原型对象上的方法是可枚举的</strong>，包括constructor构造方法<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">Point2</span>(<span class="params">x, y</span>) </span>&#123;&#125;</span><br><span class="line"></span><br><span class="line">Point2.prototype = &#123;</span><br><span class="line">  toString()&#123;&#125;,</span><br><span class="line"></span><br><span class="line">  toNumber()&#123;&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="built_in">Object</span>.keys(Point2.prototype);  <span class="comment">// ["toString", "toNumber"]</span></span><br><span class="line"><span class="built_in">Object</span>.getOwnPropertyNames(Point2.prototype);  <span class="comment">// ["toString", "toNumber"]</span></span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-<h2 id="实例对象和原型对象"><a href="#实例对象和原型对象" class="headerlink" title="实例对象和原型对象"></a>实例对象和原型对象</h2><ul>
-<li><p><strong>实例的属性需要显性地定义在this对象上，否则都是定义在原型对象上的</strong></p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Point</span> </span>&#123;</span><br><span class="line">  <span class="keyword">constructor</span>(x, y) &#123;</span><br><span class="line">    <span class="keyword">this</span>.x = x;  <span class="comment">// this指向实例对象</span></span><br><span class="line">    <span class="keyword">this</span>.y = y;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  toString() &#123;&#125;</span><br><span class="line"></span><br><span class="line">  toNumber()&#123;&#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">var</span> point = <span class="keyword">new</span> Point(<span class="number">1</span>, <span class="number">2</span>)</span><br><span class="line"></span><br><span class="line">point.hasOwnProperty(<span class="string">'__proto__'</span>);  <span class="comment">// false</span></span><br><span class="line">point.hasOwnProperty(<span class="string">'x'</span>);  <span class="comment">// true，实例对象上的属性</span></span><br><span class="line">point.hasOwnProperty(<span class="string">'toString'</span>);  <span class="comment">// false</span></span><br></pre></td></tr></table></figure>
-<ul>
-<li>上面代码中，x和y是实例对象point自身的属性(this定义)，返回true</li>
-<li>但toString是定义在原型对象上的属性，所以返回 false</li>
-<li><code>point.__proto__.hasOwnProperty(&#39;toString&#39;)</code>为true，是原型对象上的属性</li>
-</ul>
-</li>
-</ul>
-<h2 id="题外话"><a href="#题外话" class="headerlink" title="题外话"></a>题外话</h2><p>题外话，由此也可以看出</p>
-<ul>
-<li><code>Object.keys()</code>方法返回由指定对象的属性名(不包括可枚举属性)组成的数组。</li>
-<li><code>Object.getOwnPropertyNames(obj)</code>方法返回指定对象的属性名(包括可枚举属性)组成的数组。</li>
-<li><code>obj.hasOwnProperty(prop)</code>方法判断对象自身属性中是否有指定的属性，不包括从原型链上继承到的属性</li>
-<li><code>for...in...</code>循环只会遍历可枚举属性，包括从原型链上继承到的属性</li>
-</ul>
-<p>遍历object的key<br>  <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> (<span class="keyword">var</span> key <span class="keyword">in</span> obj) &#123;</span><br><span class="line">  <span class="keyword">if</span> (obj.hasOwnProperty(key)) &#123;</span><br><span class="line">    <span class="comment">// do something</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<p>  相当于<br>  <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">Object</span>.keys(obj).forEach(<span class="function"><span class="params">key</span> =&gt;</span> &#123;</span><br><span class="line">  <span class="comment">// do something</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<p>  但第二种方法的性能比第一种要差些，第二种新建了一个函数的作用域</p>
-<p>  为什么要加<code>hasOwnProperty</code>判断呢<br>  <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Point</span> </span>&#123;</span><br><span class="line">  <span class="keyword">constructor</span>(x, y) &#123;</span><br><span class="line">    <span class="keyword">this</span>.x = x;  <span class="comment">// this指向实例对象</span></span><br><span class="line">    <span class="keyword">this</span>.y = y;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  toString() &#123;&#125;</span><br><span class="line"></span><br><span class="line">  toNumber()&#123;&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">Point.prototype = &#123;<span class="attr">foo</span>: <span class="string">'bar'</span>&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> point = <span class="keyword">new</span> Point(<span class="number">1</span>, <span class="number">2</span>)</span><br><span class="line"></span><br><span class="line">point.z = <span class="number">3</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(point);  <span class="comment">// ["x", "y", "z"]</span></span><br><span class="line"><span class="built_in">console</span>.log(<span class="built_in">Object</span>.getOwnPropertyNames(point));  <span class="comment">// ["x", "y", "z"]</span></span><br><span class="line"><span class="built_in">console</span>.log(<span class="built_in">Object</span>.getOwnPropertyNames(Point.prototype));  <span class="comment">// ["constructor", "toString", "toNumber"]</span></span><br></pre></td></tr></table></figure></p>
-<p>  实例point有<code>x</code>、<code>y</code>、<code>z</code>和从原型链上继承的<code>foo</code>总共四个属性</p>
-<p>  执行下面代码<br>  <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> (<span class="keyword">var</span> key <span class="keyword">in</span> point) &#123;</span><br><span class="line">  <span class="keyword">if</span> (point.hasOwnProperty(key)) &#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">'has:'</span>, key, point[key])</span><br><span class="line">  &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">'no:'</span>, key, point[key])</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<p>  打印出来的结果是：<br>  <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">has: x <span class="number">1</span></span><br><span class="line">has: y <span class="number">2</span></span><br><span class="line">has: z <span class="number">3</span></span><br><span class="line">no: foo bar</span><br></pre></td></tr></table></figure></p>
-<p>  <code>for..in..</code>循环时会包括从原型链上继承的属性，<code>foo</code>就是从原型链上继承的属性。使用<code>hasOwnProperty</code>可以分离出对象自身的属性和继承的属性</p>
-<p>  再次执行：<br>  <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">point.foo = <span class="string">'new bar'</span></span><br></pre></td></tr></table></figure></p>
-<p>  打印出来的结果是：<br>  <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">has: x <span class="number">1</span></span><br><span class="line">has: y <span class="number">2</span></span><br><span class="line">has: z <span class="number">3</span></span><br><span class="line">has: foo <span class="keyword">new</span> bar</span><br></pre></td></tr></table></figure></p>
-<p>  修改对象继承的属性值时，会让继承的属性直接成为自身的属性</p>
-<h2 id="类的所有实例共享一个原型对象"><a href="#类的所有实例共享一个原型对象" class="headerlink" title="类的所有实例共享一个原型对象"></a>类的所有实例共享一个原型对象</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> p1 = <span class="keyword">new</span> Point(<span class="number">2</span>,<span class="number">3</span>);</span><br><span class="line"><span class="keyword">var</span> p2 = <span class="keyword">new</span> Point(<span class="number">3</span>,<span class="number">2</span>);</span><br><span class="line"></span><br><span class="line">p1.__proto__ === p2.__proto__</span><br></pre></td></tr></table></figure>
-<ul>
-<li><p>这也意味着，可以通过实例的<code>__proto__</code>属性为类添加方法</p>
-</li>
-<li><p>这导致修改一个实例的原型对象时，会改写类的原始定义，影响这个类的所有实例</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">p1.__proto__.toNiu = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="keyword">return</span> <span class="string">'niu'</span></span><br><span class="line">&#125;</span><br><span class="line">p1.toNiu()  <span class="comment">// 'niu'</span></span><br><span class="line">p2.toNiu()  <span class="comment">// 'niu'</span></span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-<h2 id="参考文档"><a href="#参考文档" class="headerlink" title="参考文档"></a>参考文档</h2><ul>
-<li><a href="http://es6.ruanyifeng.com/#docs/class" target="_blank" rel="noopener">class</a></li>
-<li><a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/keys" target="_blank" rel="noopener">Object.keys()</a></li>
-<li><a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/getOwnPropertyNames" target="_blank" rel="noopener">Object.getOwnpropertyNames()</a></li>
-<li><a href="https://stackoverflow.com/questions/12735778/for-in-and-hasownproperty/12735977#12735977" target="_blank" rel="noopener">for..in and hasOwnProperty [duplicate]</a></li>
-</ul>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
+        <div class="article-info info-on-right">
+          
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
@@ -250,127 +194,22 @@
 		</ul>
 	</div>
 
-      
+          
 
-      
-
-      
-        
-<div class="share-btn share-icons tooltip-left">
-  <div class="tooltip tooltip-east">
-    <span class="tooltip-item">
-      <a href="javascript:;" class="share-sns share-outer">
-        <i class="icon icon-share"></i>
-      </a>
-    </span>
-    <span class="tooltip-content">
-      <div class="share-wrap">
-        <div class="share-icons">
-          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
-            <i class="icon icon-weibo"></i>
-          </a>
-          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
-            <i class="icon icon-weixin"></i>
-          </a>
-          <a class="qq share-sns" href="javascript:;" data-type="qq">
-            <i class="icon icon-qq"></i>
-          </a>
-          <a class="douban share-sns" href="javascript:;" data-type="douban">
-            <i class="icon icon-douban"></i>
-          </a>
-          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
-            <i class="icon icon-qzone"></i>
-          </a>
-          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
-            <i class="icon icon-facebook"></i>
-          </a>
-          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
-            <i class="icon icon-twitter"></i>
-          </a>
-          <a class="google share-sns" href="javascript:;" data-type="google">
-            <i class="icon icon-google"></i>
-          </a>
         </div>
-      </div>
-    </span>
-  </div>
-</div>
-
-<div class="page-modal wx-share js-wx-box">
-    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
-    <p>扫一扫，分享到微信</p>
-    <div class="wx-qrcode">
-      <img src="http://s.jiathis.com/qrcode.php?url=http://yoursite.com/2018/03/05/关于class的一些总结/" alt="微信分享二维码">
-    </div>
-</div>
-
-<div class="mask js-mask"></div>
-      
-      <div class="clearfix"></div>
-    </div>
+        <div class="clearfix"></div>
+    </header>
   </div>
 </article>
-
-  
-<nav id="article-nav">
-  
-    <a href="/2018/03/18/深入理解JS的连等赋值/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          深入理解JS的连等赋值
-        
-      </div>
-    </a>
   
   
-    <a href="/2018/03/05/js笔试收集/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">js笔试收集</div>
-      <i class="icon-circle-right"></i>
-    </a>
-  
-</nav>
-
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-        <div class="toc-container tooltip-left">
-            <i class="icon-font icon-category"></i>
-            <div class="tooltip tooltip-east">
-                <span class="tooltip-item">
-                </span>
-                <span class="tooltip-content">
-                    <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#类和构造函数的区别"><span class="toc-number">1.</span> <span class="toc-text">类和构造函数的区别</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#实例对象和原型对象"><span class="toc-number">2.</span> <span class="toc-text">实例对象和原型对象</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#题外话"><span class="toc-number">3.</span> <span class="toc-text">题外话</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#类的所有实例共享一个原型对象"><span class="toc-number">4.</span> <span class="toc-text">类的所有实例共享一个原型对象</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#参考文档"><span class="toc-number">5.</span> <span class="toc-text">参考文档</span></a></li></ol>
-                    </div>
-                </span>
-            </div>
-        </div>
-        
-    </div>
-</aside>
-
-
-
-  
-  
+    </div></section>
   
 
-  
-
-  
-
+    
+    <nav id="page-nav">
+      <a class="extend prev" rel="prev" href="/archives/2018/">&laquo; Prev</a><a class="page-number" href="/archives/2018/">1</a><span class="page-number current">2</span>
+    </nav>
   
 
 
@@ -394,8 +233,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: true,
-		isArchive: false,
+		isPost: false,
+		isArchive: true,
 		isTag: false,
 		isCategory: false,
 		open_in_new: true,
